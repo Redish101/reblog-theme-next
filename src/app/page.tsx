@@ -20,11 +20,11 @@ async function PostLink({ article }: { article: Article }) {
   const { month, day } = formatDate(created_at);
 
   return (
-    <div className="flex gap-4 text-lg">
+    <div className="flex gap-4 text-lg justify-between">
       <div className="text-slate-600 shrink-0">{`${month}-${day}`}</div>
       <Link
         href={`/article/${slug}`}
-        className="text-slate-600 hover:text-slate-950 transition"
+        className="text-slate-600 hover:text-slate-950 transition w-full text-start"
       >
         {title}
       </Link>
