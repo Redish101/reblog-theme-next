@@ -31,7 +31,6 @@ async function PostLink({ article }: { article: Article }) {
     </div>
   );
 }
-
 export default async function Home() {
   const themekit = getThemeKit();
 
@@ -50,8 +49,14 @@ export default async function Home() {
       acc[year].push(article);
       return acc;
     },
-    {} as { [year: number]: Article[] },
+    {} as { [year: number]: Article[] }
   );
+
+  const sortedYears = groupedArticles
+    ? Object.entries(groupedArticles).sort(
+        (a, b) => parseInt(b[0]) - parseInt(a[0])
+      )
+    : [];
 
   return (
     <div className="flex flex-col gap-24 my-16">
@@ -60,19 +65,18 @@ export default async function Home() {
         <div className="text-base font-normal text-slate-600">{site?.desc}</div>
       </div>
       <div>
-        {groupedArticles &&
-          Object.entries(groupedArticles).map(([year, articlesForYear]) => (
-            <div key={year} className="flex flex-col gap-8 mb-32">
-              <h2 className="text-8xl font-semibold text-slate-200 absolute z-[-1] mt-[-35px] ml-[-35px] pl-[10px] select-none">
-                {year}
-              </h2>
-              <div className="flex flex-col gap-4">
-                {articlesForYear.map((article) => (
-                  <PostLink key={article.slug} article={article} />
-                ))}
-              </div>
+        {sortedYears.map(([year, articlesForYear]) => (
+          <div key={year} className="flex flex-col gap-8 mb-32">
+            <h2 className="text-8xl font-semibold text-slate-200 absolute z-[-1] mt-[-35px] ml-[-35px] pl-[10px] select-none">
+              {year}
+            </h2>
+            <div className="flex flex-col gap-4">
+              {articlesForYear.map((article) => (
+                <PostLink key={article.slug} article={article} />
+              ))}
             </div>
-          ))}
+          </div>
+        ))}
       </div>
     </div>
   );
