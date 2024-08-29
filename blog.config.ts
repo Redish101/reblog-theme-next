@@ -1,0 +1,11 @@
+import { defineConfig } from "@/core/config";
+
+export default defineConfig({
+  serverUrl: "http://localhost:3001",
+  menu: [
+    // {
+    //   label: "友链",
+    //   path: "/links",
+    // },
+  ],
+});
