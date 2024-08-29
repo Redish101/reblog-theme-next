@@ -4,14 +4,16 @@ import Link from "next/link";
 
 function formatDate(dateString: string): {
   year: number;
-  month: number;
-  day: number;
+  month: string;
+  day: string;
 } {
   const date = new Date(dateString);
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const day = date.getDate().toString().padStart(2, "0");
   return {
     year: date.getFullYear(),
-    month: date.getMonth() + 1,
-    day: date.getDate(),
+    month: month,
+    day: day,
   };
 }
 
