@@ -5,9 +5,14 @@ export interface MenuItem {
   path: string;
 }
 
+export interface twikooConfig {
+  envId: string;
+}
+
 export interface UserConfig {
   serverUrl: string;
   menu?: MenuItem[];
+  twikoo?: twikooConfig;
 }
 
 export function defineConfig(options: UserConfig) {

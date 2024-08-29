@@ -8,4 +8,7 @@ export default defineConfig({
     //   path: "/links",
     // },
   ],
+  twikoo: {
+    envId: "https://twikoo.redish101.top",
+  },
 });

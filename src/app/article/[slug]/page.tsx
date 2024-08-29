@@ -3,6 +3,7 @@ import { Metadata } from "next";
 
 import "./content.css";
 import render from "@/core/render";
+import Comment from "@/components/Comment";
 
 export async function generateMetadata({
   params,
@@ -51,6 +52,7 @@ export default async function Article({
         className="markdown-body"
         dangerouslySetInnerHTML={{ __html: renderedContent }}
       />
+      <Comment />
     </div>
   );
 }
