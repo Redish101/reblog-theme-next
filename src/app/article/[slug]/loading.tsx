@@ -12,7 +12,18 @@ export default function Loading() {
           <Skeleton width="100%" height={24} />
         </div>
       </div>
-      <Skeleton width="100%" height={320} />
+      <article className="flex flex-col gap-4">
+        <p>
+          <Skeleton width="100%" height={24} />
+          <Skeleton width="100%" height={24} />
+          <Skeleton width="12%" height={24} />
+        </p>
+        <p>
+          <Skeleton width="100%" height={24} />
+          <Skeleton width="100%" height={24} />
+          <Skeleton width="25%" height={24} />
+        </p>
+      </article>
     </div>
   );
 }
