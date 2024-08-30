@@ -39,7 +39,7 @@ export default async function Article({
   const renderedContent = await render(article?.content!);
 
   return (
-    <div>
+    <div className="transition-all">
       <div className="my-16 flex flex-col gap-4">
         <h1 className="text-3xl font-medium leading-normal">
           {article?.title}
