@@ -862,8 +862,9 @@
   display: none;
 }
 
-.markdown-body del code {
-  text-decoration: inherit;
+.markdown-body del {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
 }
 
 .markdown-body samp {
