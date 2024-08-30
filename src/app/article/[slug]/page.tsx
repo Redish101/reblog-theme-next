@@ -20,7 +20,7 @@ export async function generateMetadata({
 
 function cookDate(date: string) {
   const dateObj = new Date(date);
-  return dateObj.toLocaleDateString(undefined, {
+  return dateObj.toLocaleDateString("zh-CN", {
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
@@ -44,7 +44,7 @@ export default async function Article({
         <h1 className="text-3xl font-medium leading-normal">
           {article?.title}
         </h1>
-        <div className="font-normal text-slate-600">
+        <div className="font-normal text-slate-600 dark:text-slate-400">
           最后更新于 {cookDate(article?.updated_at!)}
         </div>
       </div>

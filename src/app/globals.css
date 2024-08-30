@@ -8,6 +8,14 @@
   --nav-background: #fafeff90;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #181c27;
+    --foreground: #e8e5ea;
+    --nav-background: #252d3890;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

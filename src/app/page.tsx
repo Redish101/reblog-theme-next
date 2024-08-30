@@ -1,5 +1,6 @@
 import getThemeKit from "@/libs/themekit";
 import { Article } from "@reblog/themekit";
+import clsx from "clsx";
 import Link from "next/link";
 
 function formatDate(dateString: string): {
@@ -22,11 +23,16 @@ async function PostLink({ article }: { article: Article }) {
   const { month, day } = formatDate(created_at);
 
   return (
-    <div className="flex gap-4 text-lg justify-between">
-      <div className="text-slate-600 shrink-0">{`${month}-${day}`}</div>
+    <div className="flex gap-4 text-lg">
+      <div
+        className={clsx("text-slate-600 shrink-0", "dark:text-slate-400")}
+      >{`${month}-${day}`}</div>
       <Link
         href={`/article/${slug}`}
-        className="text-slate-600 hover:text-slate-950 transition w-full text-start"
+        className={clsx(
+          "text-slate-600 hover:text-slate-950 transition",
+          "dark:text-slate-300 hover:text-slate-50",
+        )}
       >
         {title}
       </Link>
@@ -51,12 +57,12 @@ export default async function Home() {
       acc[year].push(article);
       return acc;
     },
-    {} as { [year: number]: Article[] }
+    {} as { [year: number]: Article[] },
   );
 
   const sortedYears = groupedArticles
     ? Object.entries(groupedArticles).sort(
-        (a, b) => parseInt(b[0]) - parseInt(a[0])
+        (a, b) => parseInt(b[0]) - parseInt(a[0]),
       )
     : [];
 
@@ -64,12 +70,20 @@ export default async function Home() {
     <div className="flex flex-col gap-24 my-16">
       <div className="flex flex-col gap-4">
         <h1 className="text-4xl font-medium">{site?.name}</h1>
-        <div className="text-base font-normal text-slate-600">{site?.desc}</div>
+        <div className="text-base font-normal text-slate-600 dark:text-slate-400">
+          {site?.desc}
+        </div>
       </div>
       <div>
         {sortedYears.map(([year, articlesForYear]) => (
           <div key={year} className="flex flex-col gap-8 mb-32">
-            <h2 className="text-8xl font-semibold text-slate-200 absolute z-[-1] mt-[-35px] ml-[-35px] pl-[10px] select-none">
+            <h2
+              className={clsx(
+                "text-8xl font-semibold text-slate-200",
+                "dark:text-slate-800",
+                "absolute z-[-1] mt-[-35px] ml-[-35px] pl-[10px] select-none",
+              )}
+            >
               {year}
             </h2>
             <div className="flex flex-col gap-4">
