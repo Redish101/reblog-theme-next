@@ -31,7 +31,7 @@ async function PostLink({ article }: { article: Article }) {
         href={`/article/${slug}`}
         className={clsx(
           "text-slate-600 hover:text-slate-950 transition",
-          "dark:text-slate-300 hover:text-slate-100"
+          "dark:text-slate-300 dark:hover:text-slate-50"
         )}
       >
         {title}
