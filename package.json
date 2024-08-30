@@ -13,6 +13,7 @@
     "@reblog/themekit": "^0.1.5",
     "@shikijs/rehype": "^1.14.1",
     "next": "14.2.7",
+    "nextjs-toploader": "^3.6.15",
     "react": "^18",
     "react-dom": "^18",
     "react-loading-skeleton": "^3.4.0",
