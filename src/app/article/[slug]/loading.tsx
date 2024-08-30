@@ -9,7 +9,7 @@ export default function Loading() {
           <Skeleton width="100%" height={60} />
         </h1>
         <div className="font-normal text-slate-600 dark:text-slate-400">
-          <Skeleton width="100%" height={24} />
+          <Skeleton width="14%" height={24} />
         </div>
       </div>
       <article className="flex flex-col gap-4">
