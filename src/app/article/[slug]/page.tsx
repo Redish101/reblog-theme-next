@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import "./content.css";
 import render from "@/core/render";
 import Comment from "@/components/Comment";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({
   params,
@@ -35,6 +36,9 @@ export default async function Article({
   const { slug } = params;
   const themekit = getThemeKit();
   const article = await themekit.getArticle(slug);
+  if (!article) {
+    return notFound()
+  }
 
   const renderedContent = await render(article?.content!);
 
