@@ -37,7 +37,7 @@ export default async function Article({
   const themekit = getThemeKit();
   const article = await themekit.getArticle(slug);
   if (!article) {
-    return notFound()
+    return notFound();
   }
 
   const renderedContent = await render(article?.content!);
@@ -49,7 +49,7 @@ export default async function Article({
           {article?.title}
         </h1>
         <div className="font-normal text-slate-600 dark:text-slate-400">
-          最后更新于 {cookDate(article?.updated_at!)}
+          发布于 {cookDate(article?.created_at!)}
         </div>
       </div>
       <article
