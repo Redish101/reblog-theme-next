@@ -6,10 +6,10 @@ export default defineConfig({
       ? "https://reblog.redish101.top"
       : "http://localhost:3001",
   menu: [
-    // {
-    //   label: "友链",
-    //   path: "/links",
-    // },
+    {
+      label: "友链",
+      path: "/links",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",

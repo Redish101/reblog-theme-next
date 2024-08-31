@@ -10,7 +10,7 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "@reblog/themekit": "^0.1.6",
+    "@reblog/themekit": "^0.1.7",
     "@sentry/nextjs": "^8.27.0",
     "@shikijs/rehype": "^1.14.1",
     "next": "14.2.7",

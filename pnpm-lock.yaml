@@ -8,8 +8,8 @@ importers:
   .:
     dependencies:
       "@reblog/themekit":
-        specifier: ^0.1.6
-        version: 0.1.6
+        specifier: ^0.1.7
+        version: 0.1.7
       "@sentry/nextjs":
         specifier: ^8.27.0
         version: 8.27.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@1.26.0(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.52.1(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.26.0(@opentelemetry/api@1.9.0))(next@14.2.7(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(webpack@5.94.0)
@@ -714,10 +714,10 @@ packages:
         integrity: sha512-r074avGkpPXItk+josQPhufZEmGhUCb16PQx4ITPS40vWTpTPET4VsgCBZB2alIN6SS7pRFod2vz2M2HHEEylQ==,
       }
 
-  "@reblog/themekit@0.1.6":
+  "@reblog/themekit@0.1.7":
     resolution:
       {
-        integrity: sha512-QjXd+3k/JiLhEkMlY7o7n3pige+tF7x+nVQIHs23f6QXJlkMm87ili01aSKbk8WxawZxnSFvlDw2PVRxzseOYw==,
+        integrity: sha512-bnJSEWEHcUK6VMG/33NGYePyAtqVbG5CNQJ769+h/T5FgTVSrIGcQxPvTppcLjxfF7jMvRlRqZmoX18todvf9g==,
       }
 
   "@rollup/plugin-commonjs@26.0.1":
@@ -5084,7 +5084,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  "@reblog/themekit@0.1.6": {}
+  "@reblog/themekit@0.1.7": {}
 
   "@rollup/plugin-commonjs@26.0.1(rollup@3.29.4)":
     dependencies:

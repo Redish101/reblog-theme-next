@@ -39,6 +39,7 @@ async function PostLink({ article }: { article: Article }) {
     </div>
   );
 }
+
 export default async function Home() {
   const themekit = getThemeKit();
 
