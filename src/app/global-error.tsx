@@ -9,9 +9,12 @@ export default function GlobalError({
 }: {
   error: Error & { digest?: string };
 }) {
+  const isProd = process.env.NODE_ENV === "production";
   useEffect(() => {
-    Sentry.captureException(error);
-  }, [error]);
+    if (isProd) {
+      Sentry.captureException(error);
+    }
+  }, [error, isProd]);
 
   return (
     <html>
