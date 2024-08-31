@@ -37,6 +37,7 @@ export default async function Article({
   const themekit = getThemeKit();
   const article = await themekit.getArticle(slug);
   if (!article) {
+    throw new Error("测试下报错");
     return notFound();
   }
 
