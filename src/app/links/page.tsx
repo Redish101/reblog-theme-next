@@ -1,13 +1,11 @@
-import Comment from "@/components/Comment";
-import getThemeKit from "@/libs/themekit";
-import { Friend } from "@reblog/themekit";
+import { FriendLinkItem, getConfig } from "@/core/config";
 import clsx from "clsx";
 import Link from "next/link";
 
-async function LinkItem({ link }: { link: Friend }) {
+async function LinkItem({ link }: { link: FriendLinkItem }) {
   return (
     <Link
-      href={link.url}
+      href={link.link}
       className={clsx(
         "text-slate-600 hover:text-slate-950 transition text-lg",
         "dark:text-slate-300 dark:hover:text-slate-50",
@@ -19,20 +17,21 @@ async function LinkItem({ link }: { link: Friend }) {
 }
 
 export default async function Links() {
-  const themekit = getThemeKit();
-  const links = await themekit.getFriendList({
-    pageIndex: 1,
-    pageSize: Number.MAX_SAFE_INTEGER,
-  });
+  const links = getConfig().friendLinks;
 
   return (
     <div className="flex flex-col gap-24 my-16">
       <h1 className="text-4xl font-medium">友情链接</h1>
-      <div>
-        {links?.friends.map((link) => <LinkItem key={link.name} link={link} />)}
+      <div className="flex flex-col gap-4">
+        {links?.map((link) => <LinkItem key={link.name} link={link} />)}
       </div>
-      <p>可通过下方留言添加您的网站</p>
-      <Comment />
+      <LinkItem
+        link={{
+          name: "添加您的网站",
+          desc: "",
+          link: "https://github.com/Redish101/reblog-theme-next",
+        }}
+      />
     </div>
   );
 }

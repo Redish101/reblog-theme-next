@@ -5,6 +5,12 @@ export interface MenuItem {
   path: string;
 }
 
+export interface FriendLinkItem {
+  name: string;
+  desc: string;
+  link: string;
+}
+
 export interface twikooConfig {
   envId: string;
 }
@@ -19,6 +25,7 @@ export interface SentryConfig {
 export interface UserConfig {
   serverUrl: string;
   menu?: MenuItem[];
+  friendLinks?: FriendLinkItem[];
   twikoo?: twikooConfig;
   sentry: SentryConfig;
 }
