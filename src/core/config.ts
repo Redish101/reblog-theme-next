@@ -9,10 +9,18 @@ export interface twikooConfig {
   envId: string;
 }
 
+export interface SentryConfig {
+  enabled: boolean;
+  dsn?: string;
+  org?: string;
+  project?: string;
+}
+
 export interface UserConfig {
   serverUrl: string;
   menu?: MenuItem[];
   twikoo?: twikooConfig;
+  sentry: SentryConfig;
 }
 
 export function defineConfig(options: UserConfig) {
