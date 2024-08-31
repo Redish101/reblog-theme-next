@@ -1,10 +1,10 @@
 import { withSentryConfig } from "@sentry/nextjs";
-import { getConfig } from "./src/core/config";
+import { getConfig } from "@/core/config";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 
-/** @type {import('./src/core/config').SentryConfig} */
+/** @type {import('@/core/config').SentryConfig} */
 const config = getConfig().sentry;
 
 export default withSentryConfig(nextConfig, {
