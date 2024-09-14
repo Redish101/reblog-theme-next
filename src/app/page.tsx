@@ -22,9 +22,11 @@ function formatDate(dateString: string): {
 async function PostLink({
   article,
   index,
+  yearIndex,
 }: {
   article: Article;
   index: number;
+  yearIndex: number;
 }) {
   const { title, slug, created_at } = article;
   const { month, day } = formatDate(created_at);
@@ -35,7 +37,7 @@ async function PostLink({
       key={index}
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
+      transition={{ duration: 0.4, delay: yearIndex * 0.2 + index * 0.1 }}
     >
       <div
         className={clsx("text-slate-600 shrink-0", "dark:text-slate-400")}
@@ -44,7 +46,7 @@ async function PostLink({
         href={`/article/${slug}`}
         className={clsx(
           "text-slate-600 hover:text-slate-950 transition",
-          "dark:text-slate-300 dark:hover:text-slate-50",
+          "dark:text-slate-300 dark:hover:text-slate-50"
         )}
       >
         {title}
@@ -71,12 +73,12 @@ export default async function Home() {
       acc[year].push(article);
       return acc;
     },
-    {} as { [year: number]: Article[] },
+    {} as { [year: number]: Article[] }
   );
 
   const sortedYears = groupedArticles
     ? Object.entries(groupedArticles).sort(
-        (a, b) => parseInt(b[0]) - parseInt(a[0]),
+        (a, b) => parseInt(b[0]) - parseInt(a[0])
       )
     : [];
 
@@ -107,7 +109,7 @@ export default async function Home() {
               className={clsx(
                 "text-8xl font-semibold text-slate-200",
                 "dark:text-slate-800",
-                "absolute z-[-1] mt-[-35px] ml-[-35px] pl-[10px] select-none",
+                "absolute z-[-1] mt-[-35px] ml-[-35px] pl-[10px] select-none"
               )}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -117,7 +119,12 @@ export default async function Home() {
             </motion.h2>
             <div className="flex flex-col gap-4">
               {articlesForYear.map((article, index) => (
-                <PostLink key={article.slug} article={article} index={index} />
+                <PostLink
+                  key={article.slug}
+                  article={article}
+                  index={index}
+                  yearIndex={yearIndex}
+                />
               ))}
             </div>
           </div>
