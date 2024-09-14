@@ -1,5 +1,6 @@
 import getThemeKit from "@/libs/themekit";
 import { Metadata } from "next";
+import * as motion from "framer-motion/client";
 
 import "./content.css";
 import render from "@/core/render";
@@ -45,15 +46,28 @@ export default async function Article({
   return (
     <div className="transition-all">
       <div className="my-16 flex flex-col gap-4">
-        <h1 className="text-3xl font-medium leading-normal">
+        <motion.h1
+          className="text-3xl font-medium leading-normal"
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
           {article?.title}
-        </h1>
-        <div className="font-normal text-slate-600 dark:text-slate-400">
+        </motion.h1>
+        <motion.div
+          className="font-normal text-slate-600 dark:text-slate-400"
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -10, opacity: 0 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
+        >
           发布于 {cookDate(article?.created_at!)}
-        </div>
+        </motion.div>
       </div>
-      <article
+      <motion.article
         className="markdown-body"
+        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: -10, opacity: 0 }}
+        transition={{ delay: 0.2, duration: 0.4 }}
         dangerouslySetInnerHTML={{ __html: renderedContent }}
       />
       <Comment />

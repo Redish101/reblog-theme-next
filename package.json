@@ -13,6 +13,7 @@
     "@reblog/themekit": "^0.1.7",
     "@sentry/nextjs": "^8.27.0",
     "@shikijs/rehype": "^1.14.1",
+    "framer-motion": "^11.5.4",
     "next": "14.2.7",
     "nextjs-toploader": "^3.6.15",
     "react": "^18",

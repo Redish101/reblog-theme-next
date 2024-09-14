@@ -1,5 +1,6 @@
 import getThemeKit from "@/libs/themekit";
 import { Article } from "@reblog/themekit";
+import * as motion from "framer-motion/client";
 import clsx from "clsx";
 import Link from "next/link";
 
@@ -18,12 +19,24 @@ function formatDate(dateString: string): {
   };
 }
 
-async function PostLink({ article }: { article: Article }) {
+async function PostLink({
+  article,
+  index,
+}: {
+  article: Article;
+  index: number;
+}) {
   const { title, slug, created_at } = article;
   const { month, day } = formatDate(created_at);
 
   return (
-    <div className="flex gap-4 text-lg">
+    <motion.div
+      className="flex gap-4 text-lg"
+      key={index}
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+    >
       <div
         className={clsx("text-slate-600 shrink-0", "dark:text-slate-400")}
       >{`${month}-${day}`}</div>
@@ -36,7 +49,7 @@ async function PostLink({ article }: { article: Article }) {
       >
         {title}
       </Link>
-    </div>
+    </motion.div>
   );
 }
 
@@ -70,26 +83,41 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-24 my-16">
       <div className="flex flex-col gap-4">
-        <h1 className="text-4xl font-medium">{site?.name}</h1>
-        <div className="text-base font-normal text-slate-600 dark:text-slate-400">
+        <motion.h1
+          className="text-4xl font-medium"
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -10, opacity: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          {site?.name}
+        </motion.h1>
+        <motion.div
+          className="text-base font-normal text-slate-600 dark:text-slate-400"
+          animate={{ y: 0, opacity: 1 }}
+          initial={{ y: -10, opacity: 0 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
+        >
           {site?.desc}
-        </div>
+        </motion.div>
       </div>
       <div>
-        {sortedYears.map(([year, articlesForYear]) => (
+        {sortedYears.map(([year, articlesForYear], yearIndex) => (
           <div key={year} className="flex flex-col gap-8 mb-32">
-            <h2
+            <motion.h2
               className={clsx(
                 "text-8xl font-semibold text-slate-200",
                 "dark:text-slate-800",
                 "absolute z-[-1] mt-[-35px] ml-[-35px] pl-[10px] select-none",
               )}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: yearIndex * 0.2 + 0.4 }}
             >
               {year}
-            </h2>
+            </motion.h2>
             <div className="flex flex-col gap-4">
-              {articlesForYear.map((article) => (
-                <PostLink key={article.slug} article={article} />
+              {articlesForYear.map((article, index) => (
+                <PostLink key={article.slug} article={article} index={index} />
               ))}
             </div>
           </div>
