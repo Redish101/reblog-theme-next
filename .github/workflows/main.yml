@@ -32,7 +32,7 @@ jobs:
         run: pnpm run build
 
       - name: Skip vercel
-        run: 'echo {"git": {"deploymentEnabled": {"static-resources": false}}} > ./next/static/vercel.json'
+        run: 'echo {"git": {"deploymentEnabled": {"static-resources": false}}} > .next/static/vercel.json'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
