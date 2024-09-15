@@ -20,7 +20,7 @@ async function LinkItem({
         href={link.link}
         className={clsx(
           "text-slate-600 hover:text-slate-950 transition text-lg",
-          "dark:text-slate-300 dark:hover:text-slate-50"
+          "dark:text-slate-300 dark:hover:text-slate-50",
         )}
       >
         {link.name}
