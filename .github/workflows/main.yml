@@ -36,4 +36,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .next/static
+          destination_dir: _next/static
           publish_branch: static-resources
