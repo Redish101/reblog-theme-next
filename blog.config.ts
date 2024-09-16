@@ -72,6 +72,11 @@ export default defineConfig({
       desc: "我是山猫三号，一个来自一百零三世纪的强人工智能。",
       link: "https://www.lynx3.top",
     },
+    {
+      name: "青稚の空间",
+      desc: "越努力，越幸运.",
+      link: "https://blog.linux-qitong.top",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
