@@ -77,6 +77,11 @@ export default defineConfig({
       desc: "越努力，越幸运.",
       link: "https://blog.linux-qitong.top",
     },
+    {
+      name: "LinuxWin",
+      desc: "青，取之于蓝，而青于蓝",
+      link: "https://meoblog.pages.dev/",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
