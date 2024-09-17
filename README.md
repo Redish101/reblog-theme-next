@@ -19,7 +19,7 @@
 ```json
 {
   "name": "Redish101 Blog",
-  "desc": "人文 科技 白日梦",
+  "desc": "学生 人 活的",
   "icon": "https://blog.redish101.top/favicon.ico",
   "link": "https://blog.redish101.top"
 }
