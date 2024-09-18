@@ -11,7 +11,7 @@ export default async function NavBar() {
     <nav
       className={clsx(
         "bg-nav-background backdrop-blur shadow h-12 flex justify-between items-center",
-        "px-2 fixed w-full z-100 top-0 sm:px-16",
+        "px-2 fixed w-full z-[1000] top-0 sm:px-16",
       )}
     >
       <span className="font-medium">
