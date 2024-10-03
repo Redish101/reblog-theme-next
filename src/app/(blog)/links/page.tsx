@@ -2,13 +2,25 @@ import { FriendLinkItem, getConfig } from "@/core/config";
 import * as motion from "framer-motion/client";
 import clsx from "clsx";
 import Link from "next/link";
+import getLoadTime from "@/utils/loadTime";
+
+function LoadTime({ loadTime }: { loadTime?: number }) {
+  if (loadTime)
+    return (
+      <span className="text-xs text-slate-500 mx-2">
+        {loadTime !== -1 ? `${loadTime?.toFixed()}ms` : "error"}
+      </span>
+    );
+}
 
 async function LinkItem({
   link,
   index,
+  loadTime,
 }: {
   link: FriendLinkItem;
   index: number;
+  loadTime?: number;
 }) {
   return (
     <motion.div
@@ -20,10 +32,10 @@ async function LinkItem({
         href={link.link}
         className={clsx(
           "text-slate-600 hover:text-slate-950 transition text-lg",
-          "dark:text-slate-300 dark:hover:text-slate-50",
+          "dark:text-slate-300 dark:hover:text-slate-50"
         )}
       >
-        {link.name}
+        {link.name} <LoadTime loadTime={loadTime} />
       </Link>
     </motion.div>
   );
@@ -43,8 +55,13 @@ export default async function Links() {
         友情链接
       </motion.h1>
       <div className="flex flex-col gap-4">
-        {links?.map((link, index) => (
-          <LinkItem key={link.name} link={link} index={index} />
+        {links?.map(async (link, index) => (
+          <LinkItem
+            key={link.name}
+            link={link}
+            index={index}
+            loadTime={await getLoadTime(link.link)}
+          />
         ))}
       </div>
       <LinkItem
