@@ -77,6 +77,11 @@ export default defineConfig({
       desc: "越努力，越幸运.",
       link: "https://blog.linux-qitong.top",
     },
+	{
+      name: "EastWind",
+      desc: "东风不与周郎便",
+      link: "https://996.windydante.top",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
