@@ -82,6 +82,11 @@ export default defineConfig({
       desc: "东风不与周郎便",
       link: "https://996.windydante.top",
     },
+    {
+      name: "煮雪话河山",
+      desc: "如月之恒，如日之升。",
+      link: "https://blog.cent1pedee.top/",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
