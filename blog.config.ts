@@ -82,6 +82,11 @@ export default defineConfig({
       desc: "东风不与周郎便",
       link: "https://996.windydante.top",
     },
+    {
+      name: "钦烨Admibrill",
+      desc: "有志者，事竟成。",
+      link: "https://blog.qyadbr.top",
+    }
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
