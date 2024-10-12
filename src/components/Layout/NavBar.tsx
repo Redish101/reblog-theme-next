@@ -17,7 +17,7 @@ export default async function NavBar() {
       <span className="font-medium">
         <Link href="/">{site?.name}</Link>
       </span>
-      <div className="text-sm text-gray-800 flex space-x-4">
+      <div className="text-sm text-gray-800 flex space-x-4 dark:text-gray-300">
         {config.menu?.map((item) => (
           <Link key={item.label} href={item.path}>
             {item.label}
