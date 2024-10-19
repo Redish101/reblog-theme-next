@@ -87,6 +87,11 @@ export default defineConfig({
       desc: "如月之恒，如日之升。",
       link: "https://blog.cent1pedee.top/",
     },
+    {
+      name: "❖星港◎Star☆",
+      desc: "以博客记录生活与热爱！",
+      link: "https://blog.starsharbor.com",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
