@@ -6,14 +6,14 @@ import rehypeStringify from "rehype-stringify";
 import rehypeShiki from "@shikijs/rehype";
 import { cache } from "react";
 
-const render = cache(async (content: string) => {
-  const processor = unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeShiki, { theme: "github-dark" })
-    .use(rehypeStringify);
+const processor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypeShiki, { theme: "github-dark" })
+  .use(rehypeStringify);
 
+const render = cache(async (content: string) => {
   const result = await processor.process(content);
   return result.toString();
 });
