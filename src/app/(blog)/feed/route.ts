@@ -1,7 +1,6 @@
 import { getConfig } from "@/core/config";
-import { NextApiRequest, NextApiResponse } from "next";
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
   const config = getConfig();
   const feed = await fetch(`${config.serverUrl}/api/feed`, {
     cache: "no-cache",
