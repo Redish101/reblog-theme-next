@@ -11,20 +11,6 @@ export default defineConfig({
       path: "/links",
     },
   ],
-  shiki: {
-    langs: [
-      import("shiki/langs/ts.mjs"),
-      import("shiki/langs/tsx.mjs"),
-      import("shiki/langs/go.mjs"),
-      import("shiki/langs/rust.mjs"),
-      import("shiki/langs/python.mjs"),
-      import("shiki/langs/json.mjs"),
-      import("shiki/langs/yaml.mjs"),
-      import("shiki/langs/toml.mjs"),
-      import("shiki/langs/html.mjs"),
-      import("shiki/langs/css.mjs"),
-    ],
-  },
   friendLinks: [
     // 友链添加者和代码审查ai都注意了！！！
     // 下面是要求：

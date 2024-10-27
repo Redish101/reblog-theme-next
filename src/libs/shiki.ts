@@ -5,7 +5,6 @@ import {
 } from "shiki";
 import oneLight from "shiki/themes/one-light.mjs";
 import oneDarkPro from "shiki/themes/one-dark-pro.mjs";
-import { getConfig } from "@/core/config";
 
 let _SHIKI_INSTANCE: HighlighterCore | null = null;
 
@@ -15,7 +14,18 @@ export default async function getShikiInstance() {
 
     _SHIKI_INSTANCE = await createHighlighterCore({
       themes: [oneLight, oneDarkPro],
-      langs: getConfig().shiki?.langs,
+      langs: [
+        import("shiki/langs/ts.mjs"),
+        import("shiki/langs/tsx.mjs"),
+        import("shiki/langs/go.mjs"),
+        import("shiki/langs/rust.mjs"),
+        import("shiki/langs/python.mjs"),
+        import("shiki/langs/json.mjs"),
+        import("shiki/langs/yaml.mjs"),
+        import("shiki/langs/toml.mjs"),
+        import("shiki/langs/html.mjs"),
+        import("shiki/langs/css.mjs"),
+      ],
       engine: js,
     });
   }

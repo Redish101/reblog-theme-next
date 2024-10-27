@@ -6,10 +6,6 @@ export interface MenuItem {
   path: string;
 }
 
-export interface ShikiConfig {
-  langs: LanguageInput[];
-}
-
 export interface FriendLinkItem {
   name: string;
   desc: string;
@@ -30,7 +26,6 @@ export interface SentryConfig {
 export interface UserConfig {
   serverUrl: string;
   menu?: MenuItem[];
-  shiki?: ShikiConfig;
   friendLinks?: FriendLinkItem[];
   twikoo?: twikooConfig;
   sentry: SentryConfig;
