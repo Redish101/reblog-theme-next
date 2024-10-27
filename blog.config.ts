@@ -106,6 +106,11 @@ export default defineConfig({
       desc: "以博客记录生活与热爱！",
       link: "https://blog.starsharbor.com",
     },
+    {
+      name: "纸鹿摸鱼处",
+      desc: "纸鹿至麓不知路，支炉制露不止漉",
+      link: "https://blog.zhilu.cyou",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
