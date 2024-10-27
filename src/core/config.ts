@@ -1,8 +1,13 @@
-import userConfig from "@/../blog.config";
+import userConfig from "../../blog.config";
+import { LanguageInput } from "shiki";
 
 export interface MenuItem {
   label: string;
   path: string;
+}
+
+export interface ShikiConfig {
+  langs: LanguageInput[];
 }
 
 export interface FriendLinkItem {
@@ -25,6 +30,7 @@ export interface SentryConfig {
 export interface UserConfig {
   serverUrl: string;
   menu?: MenuItem[];
+  shiki?: ShikiConfig;
   friendLinks?: FriendLinkItem[];
   twikoo?: twikooConfig;
   sentry: SentryConfig;

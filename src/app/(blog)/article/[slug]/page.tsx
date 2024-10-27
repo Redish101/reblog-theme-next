@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import * as motion from "framer-motion/client";
 
 import "./content.css";
-import render from "@/core/render";
 import Comment from "@/components/Comment";
 import { notFound } from "next/navigation";
+import Markdown from "@/components/Markdown";
 
 export async function generateMetadata({
   params,
@@ -41,8 +41,6 @@ export default async function Article({
     return notFound();
   }
 
-  const renderedContent = await render(article?.content!);
-
   return (
     <div className="transition-all">
       <div className="my-16 flex flex-col gap-4">
@@ -68,8 +66,9 @@ export default async function Article({
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: -10, opacity: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}
-        dangerouslySetInnerHTML={{ __html: renderedContent }}
-      />
+      >
+        <Markdown>{article.content}</Markdown>
+      </motion.article>
       <Comment />
     </div>
   );
