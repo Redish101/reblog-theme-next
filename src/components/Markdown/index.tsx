@@ -4,6 +4,7 @@ import MCodeBlock from "./MCodeBlock";
 
 export default function Markdown({ children }: { children: string }) {
   const mdElement = compiler(children, {
+    overrides: {},
     extendsRules: {
       codeBlock: {
         react(node, output, state) {
