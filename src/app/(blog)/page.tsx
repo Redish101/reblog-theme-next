@@ -4,6 +4,8 @@ import * as motion from "framer-motion/client";
 import clsx from "clsx";
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic'
+
 function formatDate(dateString: string): {
   year: number;
   month: string;
