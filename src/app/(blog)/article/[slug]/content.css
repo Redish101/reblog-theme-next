@@ -159,8 +159,7 @@
 }
 
 .markdown-body details,
-.markdown-body figcaption,
-.markdown-body figure {
+.markdown-body figcaption {
   display: block;
 }
 
@@ -239,10 +238,6 @@
 .markdown-body samp {
   font-family: monospace;
   font-size: 1em;
-}
-
-.markdown-body figure {
-  margin: 1em 40px;
 }
 
 .markdown-body hr {

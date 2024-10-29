@@ -7,11 +7,9 @@ import Comment from "@/components/Comment";
 import { notFound } from "next/navigation";
 import Markdown from "@/components/Markdown";
 
-export async function generateMetadata(
-  props: {
-    params: Promise<{ slug: string }>;
-  }
-): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const params = await props.params;
   const themekit = getThemeKit();
   const article = await themekit.getArticle(params.slug);
@@ -30,11 +28,9 @@ function cookDate(date: string) {
   });
 }
 
-export default async function Article(
-  props: {
-    params: Promise<{ slug: string }>;
-  }
-) {
+export default async function Article(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
   const { slug } = params;
   const themekit = getThemeKit();

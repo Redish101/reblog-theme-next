@@ -22,6 +22,9 @@ importers:
       markdown-to-jsx:
         specifier: npm:@innei/markdown-to-jsx@7.4.5-fork.4
         version: "@innei/markdown-to-jsx@7.4.5-fork.4(react@18.3.1)"
+      medium-zoom:
+        specifier: ^1.1.0
+        version: 1.1.0
       next:
         specifier: 15.0.1
         version: 15.0.1(@babel/core@7.25.2)(@opentelemetry/api@1.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3323,6 +3326,12 @@ packages:
     resolution:
       {
         integrity: sha512-QGYKEuUsYT9ykKBCMOEDLsU5JRObWQusAolFMeko/tYPufNkRffBAQjIE+99jbA87xv6FgmjLtwjh9wBWajwAA==,
+      }
+
+  medium-zoom@1.1.0:
+    resolution:
+      {
+        integrity: sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==,
       }
 
   merge-stream@2.0.0:
@@ -7044,6 +7053,8 @@ snapshots:
       unist-util-position: 5.0.0
       unist-util-visit: 5.0.0
       vfile: 6.0.3
+
+  medium-zoom@1.1.0: {}
 
   merge-stream@2.0.0: {}
 
