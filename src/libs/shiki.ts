@@ -6,19 +6,6 @@ import {
 import oneLight from "shiki/themes/one-light.mjs";
 import oneDarkPro from "shiki/themes/one-dark-pro.mjs";
 
-import ts from "shiki/langs/ts.mjs";
-import tsx from "shiki/langs/tsx.mjs";
-import go from "shiki/langs/go.mjs";
-import rust from "shiki/langs/rust.mjs";
-import python from "shiki/langs/python.mjs";
-import json from "shiki/langs/json.mjs";
-import yaml from "shiki/langs/yaml.mjs";
-import toml from "shiki/langs/toml.mjs";
-import html from "shiki/langs/html.mjs";
-import css from "shiki/langs/css.mjs";
-import bash from "shiki/langs/bash.mjs";
-import xml from "shiki/langs/xml.mjs";
-
 let _SHIKI_INSTANCE: HighlighterCore | null = null;
 
 export default async function getShikiInstance() {
@@ -28,18 +15,18 @@ export default async function getShikiInstance() {
     _SHIKI_INSTANCE = await createHighlighterCore({
       themes: [oneLight, oneDarkPro],
       langs: [
-        ts,
-        tsx,
-        go,
-        rust,
-        python,
-        json,
-        yaml,
-        toml,
-        html,
-        css,
-        bash,
-        xml,
+        import("shiki/langs/ts.mjs"),
+        import("shiki/langs/tsx.mjs"),
+        import("shiki/langs/go.mjs"),
+        import("shiki/langs/rust.mjs"),
+        import("shiki/langs/python.mjs"),
+        import("shiki/langs/json.mjs"),
+        import("shiki/langs/yaml.mjs"),
+        import("shiki/langs/toml.mjs"),
+        import("shiki/langs/html.mjs"),
+        import("shiki/langs/css.mjs"),
+        import("shiki/langs/bash.mjs"),
+        import("shiki/langs/xml.mjs")
       ],
       engine: js,
     });
