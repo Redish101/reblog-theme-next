@@ -25,6 +25,8 @@ export default async function getShikiInstance() {
         import("shiki/langs/toml.mjs"),
         import("shiki/langs/html.mjs"),
         import("shiki/langs/css.mjs"),
+        import("shiki/langs/bash.mjs"),
+        import("shiki/langs/xml.mjs")
       ],
       engine: js,
     });
