@@ -7,7 +7,7 @@ import Comment from "@/components/Comment";
 import { notFound } from "next/navigation";
 import Markdown from "@/components/Markdown";
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;

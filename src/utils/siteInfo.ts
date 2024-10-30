@@ -9,7 +9,7 @@ const getSiteInfo = cache(async () => {
     return siteInfo;
   } catch (error) {
     if (isDynamicServerError(error)) {
-      throw error
+      throw error;
     }
     throw new Error(`获取站点信息失败: ${error}`);
   }
