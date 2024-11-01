@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev --turbo --experimental-https --experimental-https-key ./certs/localhost-key.pem --experimental-https-cert ./certs/localhost.pem",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write ."
@@ -11,8 +11,10 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.36",
     "@headlessui/react": "^2.1.8",
-    "@reblog/themekit": "^0.1.7",
+    "@reblog/themekit": "^0.1.8",
     "@sentry/nextjs": "^8.27.0",
+    "fast-xml-parser": "^4.5.0",
+    "feed": "^4.2.2",
     "framer-motion": "^11.5.4",
     "markdown-to-jsx": "npm:@innei/markdown-to-jsx@7.4.5-fork.4",
     "next": "15.0.2",

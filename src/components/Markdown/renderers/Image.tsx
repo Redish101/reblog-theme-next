@@ -23,7 +23,11 @@ const MImage: React.FC<{ src: string; alt?: string }> = (props) => {
 
   return (
     <figure className="my-8">
-      <img src={props.src} alt={props.alt || ""} className="rounded-md mx-auto" />
+      <img
+        src={props.src}
+        alt={props.alt || ""}
+        className="rounded-md mx-auto"
+      />
       {props.alt && (
         <figcaption className="mt-4 text-slate-600 text-sm text-center">
           {props.alt}

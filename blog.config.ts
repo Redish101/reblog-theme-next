@@ -26,6 +26,7 @@ export default defineConfig({
       name: "Tianli",
       desc: "自知之明是最可贵的知识！",
       link: "https://tianli-blog.club/",
+      feed: "https://tianli-blog.club/feed",
     },
     {
       name: "星の野",
@@ -36,16 +37,19 @@ export default defineConfig({
       name: "HiPeach",
       desc: "妙不可言",
       link: "https://blog.opeach.cn",
+      feed: "https://blog.opeach.cn/atom.xml",
     },
     {
       name: "呓语梦轩",
       desc: "用心感受生活",
       link: "https://blog.awaae001.top",
+      feed: "https://blog.awaae001.top/atom.xml",
     },
     {
       name: "清羽飞扬",
       desc: "柳影曳曳，清酒孤灯，扬笔撒墨，心境如霜",
       link: "https://blog.liushen.fun",
+      feed: "https://blog.liushen.fun/atom.xml",
     },
     {
       name: "辞琼",
@@ -56,6 +60,7 @@ export default defineConfig({
       name: "Lafcadia's Blog",
       desc: "Et in Arcadia, ego.",
       link: "https://chuishen.xyz",
+      feed: "https://chuishen.xyz/atom.xml",
     },
     {
       name: "葱苓sama",
@@ -66,6 +71,7 @@ export default defineConfig({
       name: "Ariasaka",
       desc: "人有悲欢离合 月有阴晴圆缺",
       link: "https://blog.yaria.top",
+      feed: "https://blog.yaria.top/feed",
     },
     {
       name: "LynxCatTheThird",
@@ -91,11 +97,13 @@ export default defineConfig({
       name: "❖星港◎Star☆",
       desc: "以博客记录生活与热爱！",
       link: "https://blog.starsharbor.com",
+      feed: "https://blog.starsharbor.com/atom.xml",
     },
     {
       name: "纸鹿摸鱼处",
       desc: "纸鹿至麓不知路，支炉制露不止漉",
       link: "https://blog.zhilu.cyou",
+      feed: "https://blog.zhilu.cyou/atom.xml",
     },
   ],
   twikoo: {
