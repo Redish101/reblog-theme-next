@@ -64,6 +64,7 @@ export default async function Home() {
   const articles = await themekit.getArticleList({
     pageIndex: 1,
     pageSize: Number.MAX_SAFE_INTEGER,
+    withContent: false
   });
 
   const groupedArticles = articles?.articles.reduce(
