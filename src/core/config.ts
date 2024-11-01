@@ -1,5 +1,4 @@
 import userConfig from "../../blog.config";
-import { LanguageInput } from "shiki";
 
 export interface MenuItem {
   label: string;
@@ -10,6 +9,7 @@ export interface FriendLinkItem {
   name: string;
   desc: string;
   link: string;
+  feed?: string;
 }
 
 export interface twikooConfig {
