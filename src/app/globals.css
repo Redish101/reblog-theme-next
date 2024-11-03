@@ -44,14 +44,14 @@ body {
 }
 
 .link {
-  @apply bg-transparent transition-all ease-out rounded px-0.5;
+  @apply bg-transparent transition-all ease-out px-0.5 rounded;
   background-image: linear-gradient(var(--primary-s), var(--primary-s));
+  color: var(--primary);
   background-position: bottom;
-  background-size: 100% 0.5em;
+  background-size: 100% .1em;
   background-repeat: no-repeat;
 }
 
 .link:hover {
-  background-image: linear-gradient(var(--primary), var(--primary));
-  background-size: 100% .1em;
+  background-size: 100% 100%;
 }
