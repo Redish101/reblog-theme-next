@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import localFont from 'next/font/local'
 import NavBar from "@/components/Layout/NavBar";
 import Container from "@/components/Layout/Container";
 import getSiteInfo from "@/utils/siteInfo";
 import Footer from "@/components/Layout/Footer";
 import ConsoleBadge from "@/components/ConsoleBadge";
+
+const miSans = localFont({
+  src: './font/MiSans-VF.ttf'
+})
 
 const site = await getSiteInfo();
 
@@ -19,11 +24,11 @@ export default function BlogLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div className={miSans.className}>
       <NavBar />
       <Container>{children}</Container>
       <Footer />
       <ConsoleBadge />
-    </>
+    </div>
   );
 }
