@@ -6,7 +6,7 @@ const MLink: React.FC<{
   children: React.ReactNode;
   title: string;
 }> = (props) => (
-  <Link
+  <a
     href={props.href}
     target="_blank"
     className={clsx(
@@ -20,7 +20,7 @@ const MLink: React.FC<{
     title={props.title}
   >
     {props.children}
-  </Link>
+  </a>
 );
 
 export default MLink;

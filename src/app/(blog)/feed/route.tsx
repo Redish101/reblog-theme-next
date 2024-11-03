@@ -42,6 +42,22 @@ export async function GET(req: Request) {
                 img: (props: { src: string; alt?: string }) => (
                   <img src={props.src} alt={props.alt || ""} />
                 ),
+                GithubRepoCard: ({
+                  owner,
+                  repo,
+                }: {
+                  owner: string;
+                  repo: string;
+                }) => (
+                  <>
+                    <div>
+                      GitHub仓库：
+                      <a href={`https://github.com/${owner}/${repo}`}>
+                        {owner}/{repo}
+                      </a>
+                    </div>
+                  </>
+                ),
               }}
               extendsRules={{
                 codeBlock: {
@@ -73,14 +89,14 @@ export async function GET(req: Request) {
               {article.content}
             </Markdown>
             <a href={`${link}#twikoo`}>看完了？点击发送评论</a>
-          </>,
+          </>
         );
       } catch (err) {
         return ReactDOM.renderToString(
           <p>
             由于渲染错误，本文无法通过此 RSS 阅读器阅读，请前往：
             <a href={link}>{link}</a>
-          </p>,
+          </p>
         );
       }
     };
