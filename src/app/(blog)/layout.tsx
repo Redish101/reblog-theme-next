@@ -9,6 +9,7 @@ const site = await getSiteInfo();
 export const metadata: Metadata = {
   title: site?.name,
   description: site?.desc,
+  icons: "/favicon.ico"
 };
 
 export default function BlogLayout({
