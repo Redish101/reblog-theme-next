@@ -9,7 +9,7 @@ const GithubRepoCard: React.FC<{ owner: string; repo: string }> = async (
   return (
     <Link
       className={clsx(
-        "max-w-72 bg-slate-100 mx-auto rounded-lg border-slate-300 border p-4 my-6 flex gap-3",
+        "max-w-96 bg-slate-100 mx-auto rounded-lg border-slate-300 border p-4 my-6 flex gap-3",
         "dark:bg-slate-800 dark:border-slate-700",
       )}
       href={`https://github.com/${props.owner}/${props.repo}`}
