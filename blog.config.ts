@@ -5,6 +5,7 @@ export default defineConfig({
     process.env.NODE_ENV === "production"
       ? "https://reblog.redish101.top"
       : "http://localhost:3001",
+  githubToken: process.env.GITHUB_TOKEN!,
   menu: [
     {
       label: "友链",

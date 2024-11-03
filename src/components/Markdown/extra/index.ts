@@ -1,3 +1,4 @@
 import ExtraTest from "./ExtraTest";
+import GithubRepoCard from "./GithubRepoCard";
 
-export { ExtraTest };
+export { ExtraTest, GithubRepoCard };

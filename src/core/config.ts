@@ -27,6 +27,7 @@ export interface UserConfig {
   serverUrl: string;
   menu?: MenuItem[];
   friendLinks?: FriendLinkItem[];
+  githubToken: string;
   twikoo?: twikooConfig;
   sentry: SentryConfig;
 }

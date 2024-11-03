@@ -1,4 +1,5 @@
 import MImage from "./Image";
+import MLink from "./Link";
 import { MParagraph } from "./Paragraph";
 
-export { MParagraph, MImage };
+export { MParagraph, MImage, MLink };

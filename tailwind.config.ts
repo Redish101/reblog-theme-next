@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { addDynamicIconSelectors } from "@iconify/tailwind";
 
 const config: Config = {
   content: [
@@ -19,6 +20,6 @@ const config: Config = {
       DEFAULT: "400ms",
     },
   },
-  plugins: [],
+  plugins: [addDynamicIconSelectors()],
 };
 export default config;

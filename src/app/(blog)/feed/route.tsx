@@ -15,7 +15,7 @@ export async function GET(req: Request) {
     link: site?.url,
     language: "zh-CN",
     copyright: `All rights reserved ${new Date().getFullYear()}, ${site?.name}`,
-    generator: "reblog"
+    generator: "reblog",
   });
 
   const articleList = await getThemeKit().getArticleList({
