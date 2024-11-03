@@ -7,6 +7,8 @@
   --card-background: #e2e9eb;
   --foreground: #0a1d24;
   --nav-background: #fafeff90;
+  --primary: #1a66ff;
+  --primary-s: #1a66ff50;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +17,8 @@
     --card-background: #252d38;
     --foreground: #e8e5ea;
     --nav-background: #252d3890;
+    --primary: #1a66ff;
+    --primary-s: #1a66ff50;
   }
 }
 
@@ -37,4 +41,17 @@ body {
     font-weight: var(--shiki-dark-font-weight) !important;
     text-decoration: var(--shiki-dark-text-decoration) !important;
   }
+}
+
+.link {
+  @apply bg-transparent transition-all ease-out rounded px-0.5;
+  background-image: linear-gradient(var(--primary-s), var(--primary-s));
+  background-position: bottom;
+  background-size: 100% 0.5em;
+  background-repeat: no-repeat;
+}
+
+.link:hover {
+  background-image: linear-gradient(var(--primary), var(--primary));
+  background-size: 100% .1em;
 }
