@@ -33,10 +33,12 @@ export async function GET(req: Request) {
       try {
         return ReactDOM.renderToString(
           <>
-            <blockquote>
-              本文该渲染由 reblog 前端生成，可能存在排版问题，最佳体验请前往：
-              <a href={link}>{link}</a>
-            </blockquote>
+            <p>
+              <blockquote>
+                本文该渲染由 reblog 前端生成，可能存在排版问题，最佳体验请前往：
+                <a href={link}>{link}</a>
+              </blockquote>
+            </p>
             <Markdown
               overrides={{
                 img: (props: { src: string; alt?: string }) => (
@@ -88,7 +90,9 @@ export async function GET(req: Request) {
             >
               {article.content}
             </Markdown>
-            <a href={`${link}#twikoo`}>看完了？点击发送评论</a>
+            <p>
+              <a href={`${link}#twikoo`}>看完了？点击发送评论</a>
+            </p>
           </>
         );
       } catch (err) {
