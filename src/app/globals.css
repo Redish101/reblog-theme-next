@@ -44,7 +44,7 @@ body {
 }
 
 .link {
-  @apply bg-transparent transition-all ease-out px-0.5 rounded;
+  @apply bg-transparent transition-all ease-out px-0.5;
   background-image: linear-gradient(var(--primary-s), var(--primary-s));
   color: var(--primary);
   background-position: bottom;
@@ -53,5 +53,6 @@ body {
 }
 
 .link:hover {
+  @apply rounded;
   background-size: 100% 100%;
 }
