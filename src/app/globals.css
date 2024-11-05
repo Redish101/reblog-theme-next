@@ -48,7 +48,7 @@ body {
   background-image: linear-gradient(var(--primary-s), var(--primary-s));
   color: var(--primary);
   background-position: bottom;
-  background-size: 100% .1em;
+  background-size: 100% 0.1em;
   background-repeat: no-repeat;
 }
 

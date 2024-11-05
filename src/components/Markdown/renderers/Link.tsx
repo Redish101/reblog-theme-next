@@ -5,12 +5,7 @@ const MLink: React.FC<{
   children: React.ReactNode;
   title: string;
 }> = (props) => (
-  <a
-    href={props.href}
-    target="_blank"
-    className="link"
-    title={props.title}
-  >
+  <a href={props.href} target="_blank" className="link" title={props.title}>
     {props.children}
   </a>
 );

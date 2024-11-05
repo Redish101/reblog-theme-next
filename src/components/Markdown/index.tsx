@@ -1,7 +1,6 @@
 import React from "react";
 import { compiler, MarkdownToJSX } from "markdown-to-jsx";
-import MCodeBlock from "./MCodeBlock";
-import { MImage, MLink, MParagraph } from "./renderers";
+import { MImage, MLink, MParagraph, MCodeBlock } from "./renderers";
 import { ExtraTest, GithubRepoCard } from "./extra";
 
 export default function Markdown({

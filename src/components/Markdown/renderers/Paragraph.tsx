@@ -3,7 +3,7 @@ import type { DetailedHTMLProps, FC, HTMLAttributes } from "react";
 import React from "react";
 
 // 这里使用了@innei(https://github.com/Innei/Shiro/blob/main/src/components/ui/markdown/renderers/paragraph.tsx)的实现
-export const MParagraph: FC<
+const MParagraph: FC<
   DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>
 > = (props) => {
   const { children, ...other } = props;
@@ -30,3 +30,5 @@ const isImage = (child: any) => {
   }
   return false;
 };
+
+export default MParagraph;
