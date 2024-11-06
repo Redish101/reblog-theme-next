@@ -19,7 +19,13 @@ export default async function MCodeBlock({
   });
   return (
     <div className="group relative">
-      <span className="center absolute bottom-2 right-4 flex gap-1 text-xm uppercase opacity-50 dark:text-white items-center">
+      <span
+        className={clsx(
+          "center absolute bottom-2 right-4 flex gap-1 uppercase opacity-50 items-center",
+          "text-sm font-light tracking-wider",
+          "dark:text-white"
+        )}
+      >
         {lang}
       </span>
       <div dangerouslySetInnerHTML={{ __html: renderedCode }} />
