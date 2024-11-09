@@ -9,7 +9,7 @@ import Footer from "@/components/Layout/Footer";
 import ConsoleBadge from "@/components/ConsoleBadge";
 
 const miSans = localFont({
-  src: "./font/MiSans-VF.ttf",
+  src: "./font/MiSans-VF.woff2",
 });
 
 const site = await getSiteInfo();
