@@ -23,7 +23,7 @@ export default async function MCodeBlock({
         className={clsx(
           "center absolute bottom-2 right-4 flex gap-1 uppercase opacity-50 items-center",
           "text-sm font-light tracking-wider",
-          "dark:text-white"
+          "dark:text-white",
         )}
       >
         {lang}
