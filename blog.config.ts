@@ -26,8 +26,8 @@ export default defineConfig({
     {
       name: "Tianli",
       desc: "自知之明是最可贵的知识！",
-      link: "https://tianli-blog.club/",
-      feed: "https://tianli-blog.club/feed",
+      link: "https://blog.tianli0.top/",
+      feed: "https://blog.tianli0.top/rss.xml",
     },
     {
       name: "星の野",
