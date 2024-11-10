@@ -63,7 +63,7 @@ export default async function Article(props: {
         </motion.div>
       </div>
       <motion.article
-        className={"prose dark:prose-dark max-w-none prose-a:no-underline"}
+        className={"prose dark:prose-invert max-w-none prose-a:no-underline"}
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: -10, opacity: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}
