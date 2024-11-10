@@ -2,7 +2,6 @@ import getThemeKit from "@/libs/themekit";
 import { Metadata } from "next";
 import * as motion from "framer-motion/client";
 
-import "./content.css";
 import Comment from "@/components/Comment";
 import { notFound } from "next/navigation";
 import Markdown from "@/components/Markdown";
@@ -62,7 +61,7 @@ export default async function Article(props: {
         </motion.div>
       </div>
       <motion.article
-        className="markdown-body"
+        className={"prose dark:prose-dark max-w-none prose-a:no-underline"}
         animate={{ y: 0, opacity: 1 }}
         initial={{ y: -10, opacity: 0 }}
         transition={{ delay: 0.2, duration: 0.4 }}

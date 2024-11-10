@@ -16,6 +16,7 @@
     "@iconify/tailwind": "^1.1.3",
     "@reblog/themekit": "^0.1.8",
     "@sentry/nextjs": "^8.27.0",
+    "@tailwindcss/typography": "^0.5.15",
     "fast-xml-parser": "^4.5.0",
     "feed": "^4.2.2",
     "framer-motion": "^11.5.4",
