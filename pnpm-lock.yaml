@@ -13,6 +13,9 @@ importers:
       "@headlessui/react":
         specifier: ^2.1.8
         version: 2.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      "@iconify-json/ic":
+        specifier: ^1.2.1
+        version: 1.2.1
       "@iconify-json/line-md":
         specifier: ^1.2.2
         version: 1.2.2
@@ -40,6 +43,9 @@ importers:
       framer-motion:
         specifier: ^11.5.4
         version: 11.11.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      import-in-the-middle:
+        specifier: ^1.11.2
+        version: 1.11.2
       markdown-to-jsx:
         specifier: npm:@innei/markdown-to-jsx@7.4.5-fork.4
         version: "@innei/markdown-to-jsx@7.4.5-fork.4(react@18.3.1)"
@@ -61,6 +67,9 @@ importers:
       react-loading-skeleton:
         specifier: ^3.4.0
         version: 3.5.0(react@18.3.1)
+      require-in-the-middle:
+        specifier: ^7.4.0
+        version: 7.4.0
       shiki:
         specifier: ^1.22.1
         version: 1.22.2
@@ -276,6 +285,12 @@ packages:
     peerDependencies:
       react: ^18 || ^19 || ^19.0.0-rc
       react-dom: ^18 || ^19 || ^19.0.0-rc
+
+  "@iconify-json/ic@1.2.1":
+    resolution:
+      {
+        integrity: sha512-UjL/bjJP/T5EV881+hTzcfTKVo0KEUjhnMiJcLtPzNgPtU2KZZmRx8BSKKR61H4CN/5FTEbyawGyG0aEt3SwGQ==,
+      }
 
   "@iconify-json/line-md@1.2.2":
     resolution:
@@ -3784,6 +3799,10 @@ snapshots:
       "@tanstack/react-virtual": 3.10.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
+
+  "@iconify-json/ic@1.2.1":
+    dependencies:
+      "@iconify/types": 2.0.0
 
   "@iconify-json/line-md@1.2.2":
     dependencies:

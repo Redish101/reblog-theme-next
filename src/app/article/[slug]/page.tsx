@@ -5,6 +5,8 @@ import * as motion from "framer-motion/client";
 import Comment from "@/components/Comment";
 import { notFound } from "next/navigation";
 import Markdown from "@/components/Markdown";
+import CopyrightCard from "@/components/CopyrightCard";
+import getSiteInfo from "@/utils/siteInfo";
 
 export const dynamic = "force-dynamic";
 
@@ -68,6 +70,10 @@ export default async function Article(props: {
       >
         <Markdown>{article.content}</Markdown>
       </motion.article>
+      <CopyrightCard
+        title={article.title}
+        url={`${(await getSiteInfo())?.url}/article/${slug}`}
+      />
       <Comment />
     </div>
   );
