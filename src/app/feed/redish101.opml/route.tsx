@@ -1,10 +1,9 @@
-import type { NextApiRequest } from "next";
 import { getConfig } from "@/core/config";
 import { XMLBuilder } from "fast-xml-parser";
 
 export const dynamic = "auto";
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: Request) {
   const config = getConfig();
   const friendLinks = config.friendLinks || [];
 
