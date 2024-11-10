@@ -20,7 +20,7 @@ async function LinkItem({
         "bg-slate-100 rounded-lg border-slate-300 border flex gap-2",
         "dark:bg-slate-800 dark:border-slate-700",
         "md:hover:shadow-lg md:hover:-translate-y-1 transition-all ease-out hover:shadow-xl hover:-translate-y-2",
-        "active:shadow-none active:translate-y-0"
+        "active:shadow-none active:translate-y-0",
       )}
       href={link.link}
     >

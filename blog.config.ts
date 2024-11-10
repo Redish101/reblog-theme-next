@@ -106,6 +106,11 @@ export default defineConfig({
       link: "https://blog.zhilu.cyou",
       feed: "https://blog.zhilu.cyou/atom.xml",
     },
+    {
+      name: "花生莲子粥",
+      desc: "与世无争，不染于泥",
+      link: "https://blog.hslzz.cn",
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
