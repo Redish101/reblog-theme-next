@@ -1,7 +1,10 @@
 import { defineConfig } from "@/core/config";
 
 export default defineConfig({
-  serverUrl: "http://localhost:3001",
+  serverUrl:
+    process.env.NODE_ENV === "production"
+      ? "https://reblog.redish101.top"
+      : "http://localhost:3001",
   githubToken: process.env.GITHUB_TOKEN!,
   menu: [
     {
