@@ -3,7 +3,7 @@ import * as Sentry from "@sentry/nextjs";
 
 const config = getConfig().sentry;
 
-if (config.enabled) {
+if (config.enabled && process.env.NODE_ENV !== "development") {
   Sentry.init({
     dsn: config.dsn,
 
