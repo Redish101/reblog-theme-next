@@ -1,7 +1,7 @@
 import { getConfig } from "@/core/config";
 import { XMLBuilder } from "fast-xml-parser";
 
-export const dynamic = "auto";
+export const dynamic = "force-static";
 
 export async function GET(req: Request) {
   const config = getConfig();
@@ -11,17 +11,17 @@ export async function GET(req: Request) {
 
   const opmlData = {
     opml: {
-      version: "1.0",
+      "$version": "2.0",
       head: {
         title: "Redish101的朋友们",
       },
       body: {
         outline: linksWithFeed.map((link) => ({
-          text: link.name,
-          title: link.name,
-          type: "rss",
-          xmlUrl: link.feed,
-          htmlUrl: link.link,
+          "$text": link.name,
+          "$title": link.name,
+          "$type": "rss",
+          "$xmlUrl": link.feed,
+          "$htmlUrl": link.link,
         })),
       },
     },
@@ -30,6 +30,7 @@ export async function GET(req: Request) {
   const builder = new XMLBuilder({
     ignoreAttributes: false,
     format: true,
+    attributeNamePrefix: "$"
   });
 
   const opmlContent = builder.build(opmlData);
