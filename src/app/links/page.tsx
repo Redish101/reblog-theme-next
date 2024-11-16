@@ -3,7 +3,7 @@ import * as motion from "framer-motion/client";
 import clsx from "clsx";
 import Link from "next/link";
 
-export const dynamic = "auto";
+export const dynamic = "force-static";
 
 async function LinkItem({
   link,
