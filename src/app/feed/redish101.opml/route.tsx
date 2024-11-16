@@ -11,17 +11,19 @@ export async function GET(req: Request) {
 
   const opmlData = {
     opml: {
-      "$version": "2.0",
+      $version: "2.0",
       head: {
         title: "Redish101的朋友们",
+        ownerName: "Redish101",
+        ownerEmail: "i@redish101.top",
       },
       body: {
         outline: linksWithFeed.map((link) => ({
-          "$text": link.name,
-          "$title": link.name,
-          "$type": "rss",
-          "$xmlUrl": link.feed,
-          "$htmlUrl": link.link,
+          $text: link.name,
+          $title: link.name,
+          $type: "rss",
+          $xmlUrl: link.feed,
+          $htmlUrl: link.link,
         })),
       },
     },
@@ -30,7 +32,7 @@ export async function GET(req: Request) {
   const builder = new XMLBuilder({
     ignoreAttributes: false,
     format: true,
-    attributeNamePrefix: "$"
+    attributeNamePrefix: "$",
   });
 
   const opmlContent = builder.build(opmlData);
