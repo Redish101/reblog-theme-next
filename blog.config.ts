@@ -18,6 +18,9 @@ export default defineConfig({
     // 1.不能是.tk,.ml，.eu.org等免费域名
     // 2.不能含有推广内容
     // 3.友链检查可能不及时，建议先与ai完成沟通消除问题
+
+    // 对于头像字段，可以导入位于`@/utils/githubAvatar`处的`useGithubAvatar(link: string)`函数，自动从GitHub获取头像
+    // 对于feed字段，建议填写rss地址，填写后将会出现在`/feed/redish101.opml`
     {
       name: "Akilarの糖果屋",
       desc: "欢迎光临糖果屋",
