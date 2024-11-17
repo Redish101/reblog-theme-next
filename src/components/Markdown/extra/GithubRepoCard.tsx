@@ -1,18 +1,18 @@
+import { getRepo } from "@/libs/github";
 import clsx from "clsx";
 import Link from "next/link";
+import { Suspense } from "react";
 
 interface GithubRepoCardProps {
   owner: string;
   repo: string;
-  desc?: string;
 }
 
-// FIXME: 调用GitHub API时意外的Connection close问题
-// const RepoDescription: React.FC<GithubRepoCardProps> = async (props) => {
-//   const repo = await getRepo(props.owner, props.repo);
+const RepoDescription: React.FC<GithubRepoCardProps> = async (props) => {
+  const repo = await getRepo(props.owner, props.repo);
 
-//   return <>{repo.description}</>;
-// };
+  return <>{repo.description}</>;
+};
 
 const GithubRepoCard: React.FC<GithubRepoCardProps> = (props) => {
   return (
@@ -32,16 +32,11 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = (props) => {
         <div className="font-bold text-lg">
           {props.owner}/{props.repo}
         </div>
-        {props.desc ? (
-          <div className="font-light text-sm text-slate-500">
-            {/* <Suspense fallback={<>正在加载仓库信息</>}>
-                  <RepoDescription owner={props.owner} repo={props.repo} />
-                </Suspense> */}
-            {props.desc}
-          </div>
-        ) : (
-          <></>
-        )}
+        <div className="font-light text-sm text-slate-500">
+          <Suspense fallback={<>正在加载仓库信息</>}>
+            <RepoDescription owner={props.owner} repo={props.repo} />
+          </Suspense>
+        </div>
       </div>
     </Link>
   );
