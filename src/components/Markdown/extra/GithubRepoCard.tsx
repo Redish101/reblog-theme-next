@@ -6,13 +6,15 @@ import { Suspense } from "react";
 interface GithubRepoCardProps {
   owner: string;
   repo: string;
+  desc: string
 }
 
-const RepoDescription: React.FC<GithubRepoCardProps> = async (props) => {
-  const repo = await getRepo(props.owner, props.repo);
+// FIXME: 调用GitHub API时意外的Connection close问题
+// const RepoDescription: React.FC<GithubRepoCardProps> = async (props) => {
+//   const repo = await getRepo(props.owner, props.repo);
 
-  return <>{repo.description}</>;
-};
+//   return <>{repo.description}</>;
+// };
 
 const GithubRepoCard: React.FC<GithubRepoCardProps> = (props) => {
   return (
@@ -33,9 +35,10 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = (props) => {
           {props.owner}/{props.repo}
         </div>
         <div className="font-light text-sm text-slate-500">
-          <Suspense fallback={<>正在加载仓库信息</>}>
+          {/* <Suspense fallback={<>正在加载仓库信息</>}>
             <RepoDescription owner={props.owner} repo={props.repo} />
-          </Suspense>
+          </Suspense> */}
+          {props.desc}
         </div>
       </div>
     </Link>
