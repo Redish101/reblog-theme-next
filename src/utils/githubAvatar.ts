@@ -1,3 +1,4 @@
-const useGithubAvatar = (username: string) => `https://github.com/${username}.png`
+const useGithubAvatar = (username: string) =>
+  `https://github.com/${username}.png`;
 
-export default useGithubAvatar
+export default useGithubAvatar;

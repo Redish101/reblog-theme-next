@@ -16,7 +16,7 @@ export async function GET(req: Request) {
     language: "zh-CN",
     copyright: `All rights reserved ${new Date().getFullYear()}, ${site?.name}`,
     generator: "reblog",
-    image: `${site?.url}/favicon.ico`
+    image: `${site?.url}/favicon.ico`,
   });
 
   const articleList = await getThemeKit().getArticleList({

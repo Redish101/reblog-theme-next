@@ -1,11 +1,20 @@
 import clsx from "clsx";
 import { getRepo } from "@/libs/github";
 import Link from "next/link";
+import { Suspense } from "react";
 
-const GithubRepoCard: React.FC<{ owner: string; repo: string }> = async (
-  props,
-) => {
+interface GithubRepoCardProps {
+  owner: string;
+  repo: string;
+}
+
+const RepoDescription: React.FC<GithubRepoCardProps> = async (props) => {
   const repo = await getRepo(props.owner, props.repo);
+
+  return <>{repo.description}</>;
+};
+
+const GithubRepoCard: React.FC<GithubRepoCardProps> = (props) => {
   return (
     <Link
       className={clsx(
@@ -24,7 +33,9 @@ const GithubRepoCard: React.FC<{ owner: string; repo: string }> = async (
           {props.owner}/{props.repo}
         </div>
         <div className="font-light text-sm text-slate-500">
-          {repo.description}
+          <Suspense fallback={<>正在加载仓库信息</>}>
+            <RepoDescription owner={props.owner} repo={props.repo} />
+          </Suspense>
         </div>
       </div>
     </Link>
