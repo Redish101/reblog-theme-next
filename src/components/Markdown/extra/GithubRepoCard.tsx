@@ -21,7 +21,7 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = (props) => {
         "max-w-96 bg-slate-100 mx-auto rounded-lg border-slate-300 border p-4 my-6 flex gap-3",
         "dark:bg-slate-800 dark:border-slate-700",
         "md:hover:shadow-lg md:hover:-translate-y-1 transition-all ease-out hover:shadow-xl hover:-translate-y-2",
-        "active:shadow-none active:translate-y-0"
+        "active:shadow-none active:translate-y-0",
       )}
       href={`https://github.com/${props.owner}/${props.repo}`}
     >
