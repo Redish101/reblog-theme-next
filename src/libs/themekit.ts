@@ -10,7 +10,6 @@ export default function getThemeKit() {
       server: {
         url: serverUrl,
       },
-      cache: "no-cache",
     });
   }
 
