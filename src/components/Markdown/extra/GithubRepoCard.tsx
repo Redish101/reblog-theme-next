@@ -8,6 +8,7 @@ interface GithubRepoCardProps {
   repo: string;
 }
 
+// FIXME: 仓库信息获取超时
 const RepoDescription: React.FC<GithubRepoCardProps> = async (props) => {
   const repo = await getRepo(props.owner, props.repo);
 
@@ -32,11 +33,11 @@ const GithubRepoCard: React.FC<GithubRepoCardProps> = (props) => {
         <div className="font-bold text-lg">
           {props.owner}/{props.repo}
         </div>
-        <div className="font-light text-sm text-slate-500">
+        {/* <div className="font-light text-sm text-slate-500">
           <Suspense fallback={<>正在加载仓库信息</>}>
             <RepoDescription owner={props.owner} repo={props.repo} />
           </Suspense>
-        </div>
+        </div> */}
       </div>
     </Link>
   );
