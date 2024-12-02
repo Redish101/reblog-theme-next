@@ -1,17 +1,34 @@
-import { getConfig } from "@/core/config";
-import getSiteInfo from "@/utils/siteInfo";
+"use client";
+
 import Link from "next/link";
 import clsx from "clsx";
+import { useState, useEffect } from "react";
+import { Site } from "@reblog/themekit";
+import { UserConfig } from "@/core/config";
 
-export default async function NavBar() {
-  const site = await getSiteInfo();
-  const config = getConfig();
+interface NavBarProps {
+  site: Site;
+  config: UserConfig;
+}
+
+const NavBar: React.FC<NavBarProps> = ({ site, config }) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
       className={clsx(
-        "bg-nav-background backdrop-blur shadow h-12 flex justify-between items-center",
+        "backdrop-blur h-12 flex justify-between items-center transition-all ease-out",
         "px-2 fixed w-full z-[1000] top-0 sm:px-16",
+        scrolled && "shadow bg-nav-background",
       )}
     >
       <span className="font-medium">
@@ -26,4 +43,6 @@ export default async function NavBar() {
       </div>
     </nav>
   );
-}
+};
+
+export default NavBar;

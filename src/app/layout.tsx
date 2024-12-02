@@ -1,11 +1,11 @@
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import type { Metadata } from "next";
-import NavBar from "@/components/Layout/NavBar";
 import Container from "@/components/Layout/Container";
 import getSiteInfo from "@/utils/siteInfo";
 import Footer from "@/components/Layout/Footer";
 import ConsoleBadge from "@/components/ConsoleBadge";
+import NavBarWrapper from "@/components/Layout/NavBarWrapper";
 
 // const miSans = localFont({
 //   src: "./font/MiSans-VF.woff2",
@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body>
         <NextTopLoader />
-        <NavBar />
+        <NavBarWrapper />
         <Container>{children}</Container>
         <Footer />
         <ConsoleBadge />
