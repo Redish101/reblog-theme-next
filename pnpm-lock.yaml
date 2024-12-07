@@ -98,7 +98,7 @@ importers:
         version: 8.4.49
       prettier:
         specifier: ^3.3.3
-        version: 3.4.1
+        version: 3.4.2
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.16
@@ -1814,8 +1814,8 @@ packages:
     resolution: {integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==}
     engines: {node: '>=0.10.0'}
 
-  prettier@3.4.1:
-    resolution: {integrity: sha512-G+YdqtITVZmOJje6QkXQWzl3fSfMxFwm1tjTyo9exhkmWSqC4Yhd1+lug++IlR2mvRVAxEDDWYkQdeSztajqgg==}
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4084,7 +4084,7 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  prettier@3.4.1: {}
+  prettier@3.4.2: {}
 
   progress@2.0.3: {}
 
