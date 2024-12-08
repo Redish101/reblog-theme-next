@@ -21,7 +21,7 @@ function formatDate(dateString: string): {
   };
 }
 
-async function PostLink({
+function PostLink({
   article,
   index,
   yearIndex,
@@ -34,27 +34,28 @@ async function PostLink({
   const { month, day } = formatDate(created_at);
 
   return (
-    <div className="flex gap-4 text-lg">
+    <div className="flex items-center gap-4 text-lg">
       <motion.div
-        key={index}
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: yearIndex * 0.2 + index * 0.1 }}
+      key={index}
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: yearIndex * 0.2 + index * 0.1 }}
+    >
+      <span className={clsx("text-slate-600 shrink-0 w-16", "dark:text-slate-400")}>
+        {`${month}-${day}`}
+      </span>
+      <Link
+        href={`/article/${slug}`}
+        className={clsx(
+          "text-slate-600 hover:text-slate-950 transition ml-2",
+          "dark:text-slate-300 dark:hover:text-slate-50"
+        )}
       >
-        <div
-          className={clsx("text-slate-600 shrink-0", "dark:text-slate-400")}
-        >{`${month}-${day}`}</div>
-        <Link
-          href={`/article/${slug}`}
-          className={clsx(
-            "text-slate-600 hover:text-slate-950 transition",
-            "dark:text-slate-300 dark:hover:text-slate-50"
-          )}
-        >
-          {title}
-        </Link>
-      </motion.div>
+        {title}
+      </Link>
+    </motion.div>
     </div>
+    
   );
 }
 

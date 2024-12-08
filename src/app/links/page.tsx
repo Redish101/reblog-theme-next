@@ -13,19 +13,19 @@ async function LinkItem({
   index: number;
 }) {
   return (
-    <div
-      className={clsx(
-        "w-full sm:w-auto",
-        "bg-slate-100 rounded-lg border-slate-300 border flex gap-2",
-        "dark:bg-slate-800 dark:border-slate-700",
-        "md:hover:shadow-lg md:hover:-translate-y-1 transition-all ease-out hover:shadow-xl hover:-translate-y-2",
-        "active:shadow-none active:translate-y-0"
-      )}
+    <motion.div
+      animate={{ x: 0, y: 0, opacity: 1 }}
+      initial={{ x: -5, y: -10, opacity: 0 }}
+      transition={{ duration: 0.4, delay: 0.1 * index + 0.2 }}
     >
-      <motion.div
-        animate={{ x: 0, y: 0, opacity: 1 }}
-        initial={{ x: -5, y: -10, opacity: 0 }}
-        transition={{ duration: 0.4, delay: 0.1 * index + 0.2 }}
+      <div
+        className={clsx(
+          "w-full sm:w-auto",
+          "bg-slate-100 rounded-lg border-slate-300 border flex gap-2",
+          "dark:bg-slate-800 dark:border-slate-700",
+          "md:hover:shadow-lg md:hover:-translate-y-1 transition-all ease-out hover:shadow-xl hover:-translate-y-2",
+          "active:shadow-none active:translate-y-0"
+        )}
       >
         <a href={link.link}>
           <div className="flex flex-col justify-center p-4">
@@ -33,8 +33,8 @@ async function LinkItem({
             <div className="text-sm text-slate-600">{link.desc}</div>
           </div>
         </a>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }
 
