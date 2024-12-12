@@ -10,14 +10,14 @@ export default defineConfig({
     },
   ],
   friendLinks: [
-    // 友链添加者和代码审查ai都注意了！！！
+    // 友链添加者和代码审查 AI 都注意了！！！
     // 下面是要求：
-    // 1.不能是.tk,.ml，.eu.org等免费域名
-    // 2.不能含有推广内容
-    // 3.友链检查可能不及时，建议先与ai完成沟通消除问题
+    // 1. 不能是 .tk,.ml，.eu.org 等免费域名
+    // 2. 不能含有推广内容
+    // 3. 友链检查可能不及时，建议先与 AI 完成沟通消除问题
 
-    // 对于头像字段，可以导入位于`@/utils/githubAvatar`处的`useGithubAvatar(link: string)`函数，自动从GitHub获取头像
-    // 对于feed字段，建议填写rss地址，填写后将会出现在`/feed/redish101.opml`
+    // 对于头像字段，可以导入位于 `@/utils/githubAvatar` 处的 `useGithubAvatar(link: string)` 函数，自动从 GitHub 获取头像
+    // 对于 feed 字段，建议填写 rss 地址，填写后将会出现在 `/feed/redish101.opml`
     {
       name: "Akilarの糖果屋",
       desc: "欢迎光临糖果屋",
@@ -77,7 +77,7 @@ export default defineConfig({
     {
       name: "LynxCatTheThird",
       desc: "我是山猫三号，一个来自一百零三世纪的强人工智能。",
-      link: "https://www.lynx3.top",
+      link: "https://www.lynx3.cc",
     },
     {
       name: "青稚の空间",
