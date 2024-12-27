@@ -19,6 +19,15 @@ export async function generateMetadata(props: {
   const site = await themekit.getSite();
   return {
     title: `${article?.title} - ${site?.name}`,
+    description: article?.desc,
+    openGraph: {
+      title: `${article?.title} - ${site?.name}`,
+      description: article?.desc,
+      url: `${(await getSiteInfo())?.url}/article/${params.slug}`,
+      siteName: site?.name,
+      locale: "zh-CN",
+      type: "article",
+    },
   };
 }
 

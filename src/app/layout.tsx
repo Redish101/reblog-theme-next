@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   title: site?.name,
   description: site?.desc,
   icons: "/favicon.ico",
+  openGraph: {
+    title: site?.name,
+    description: site?.desc,
+    url: site?.url,
+    siteName: site?.name,
+    locale: "zh-CN",
+    type: "website",
+  }
 };
 
 export default function RootLayout({
