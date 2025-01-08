@@ -76,7 +76,7 @@ importers:
         version: 1.24.4
       twikoo:
         specifier: ^1.6.39
-        version: 1.6.40
+        version: 1.6.41
       unified:
         specifier: ^11.0.5
         version: 11.0.5
@@ -984,6 +984,9 @@ packages:
 
   '@types/mysql@2.15.26':
     resolution: {integrity: sha512-DSLCOXhkvfS5WNNPbfn2KdICAmk8lLc+/PNvnPnF7gOdMZCxopXduqv0OQ13y/yA/zXTSikZZqVgybUxOEg6YQ==}
+
+  '@types/node@20.17.12':
+    resolution: {integrity: sha512-vo/wmBgMIiEA23A/knMfn/cf37VnuF52nZh5ZoW0GWt4e4sxNquibrMRJ7UQsA06+MBx9r/H1jsI9grYjQCQlw==}
 
   '@types/node@20.17.12':
     resolution: {integrity: sha512-vo/wmBgMIiEA23A/knMfn/cf37VnuF52nZh5ZoW0GWt4e4sxNquibrMRJ7UQsA06+MBx9r/H1jsI9grYjQCQlw==}
@@ -2117,8 +2120,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twikoo@1.6.40:
-    resolution: {integrity: sha512-Rl1OZAij95/czD1oiwmTi4Om5yZeKNENqIR7Kq0SygEztV6w2423ac9PHbOXDZPYnvTJB9wqBapS2+AlKFWcfg==}
+  twikoo@1.6.41:
+    resolution: {integrity: sha512-Hrp/fvk2N5oqin+9bkFVULstL+YMwQjn/vVL8r5FPIhyRBA0zWAgUri4hhCji4FsXegKR6+ihyMPTXBRENjnnA==}
 
   type-fest@0.7.1:
     resolution: {integrity: sha512-Ne2YiiGN8bmrmJJEuTWTLJR32nh/JdL1+PSicowtNb0WFpn59GK8/lfD61bVtzguz7b3PBt74nxpv/Pw5po5Rg==}
@@ -3324,6 +3327,10 @@ snapshots:
     dependencies:
       undici-types: 6.19.8
 
+  '@types/node@20.17.12':
+    dependencies:
+      undici-types: 6.19.8
+
   '@types/pg-pool@2.0.6':
     dependencies:
       '@types/pg': 8.6.1
@@ -4432,7 +4439,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  twikoo@1.6.40: {}
+  twikoo@1.6.41: {}
 
   type-fest@0.7.1: {}
 
