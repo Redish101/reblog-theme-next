@@ -58,7 +58,7 @@ export default async function Links() {
           <LinkItem key={link.name} link={link} index={index} />
         ))}
       </div>
-      <Link href="https://github.com/Redish101/reblog-theme-next">
+      <Link href="https://github.com/Redish101/reblog-theme-next" target="_blank" className="text-center">
         添加您的网站
       </Link>
     </div>

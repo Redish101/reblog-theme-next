@@ -112,6 +112,12 @@ export default defineConfig({
       desc: "与世无争，不染于泥",
       link: "https://blog.hslzz.cn",
     },
+    {
+      name: "天翔TNXGの空间站",
+      desc: "明日尚未到来，希望凝于心上",
+      link: "https://tnxg.top",
+      feed: "https://tnxgmoe.com/feed",
+    }
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
