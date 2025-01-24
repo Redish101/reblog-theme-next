@@ -83,7 +83,7 @@ importers:
     devDependencies:
       '@types/node':
         specifier: ^20
-        version: 20.17.14
+        version: 20.17.16
       '@types/react':
         specifier: ^19.0.0
         version: 19.0.7
@@ -991,8 +991,8 @@ packages:
   '@types/mysql@2.15.26':
     resolution: {integrity: sha512-DSLCOXhkvfS5WNNPbfn2KdICAmk8lLc+/PNvnPnF7gOdMZCxopXduqv0OQ13y/yA/zXTSikZZqVgybUxOEg6YQ==}
 
-  '@types/node@20.17.14':
-    resolution: {integrity: sha512-w6qdYetNL5KRBiSClK/KWai+2IMEJuAj+EujKCumalFOwXtvOXaEan9AuwcRID2IcOIAWSIfR495hBtgKlx2zg==}
+  '@types/node@20.17.16':
+    resolution: {integrity: sha512-vOTpLduLkZXePLxHiHsBLp98mHGnl8RptV4YAO3HfKO5UHjDvySGbxKtpYfy8Sx5+WKcgc45qNreJJRVM3L6mw==}
 
   '@types/node@20.17.16':
     resolution: {integrity: sha512-vOTpLduLkZXePLxHiHsBLp98mHGnl8RptV4YAO3HfKO5UHjDvySGbxKtpYfy8Sx5+WKcgc45qNreJJRVM3L6mw==}
@@ -3304,7 +3304,7 @@ snapshots:
 
   '@types/connect@3.4.36':
     dependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.16
 
   '@types/eslint-scope@3.7.7':
     dependencies:
@@ -3330,9 +3330,9 @@ snapshots:
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.16
 
-  '@types/node@20.17.14':
+  '@types/node@20.17.16':
     dependencies:
       undici-types: 6.19.8
 
@@ -3346,7 +3346,7 @@ snapshots:
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.16
       pg-protocol: 1.7.0
       pg-types: 2.2.0
 
@@ -3362,7 +3362,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 20.17.14
+      '@types/node': 20.17.16
 
   '@types/unist@3.0.3': {}
 
