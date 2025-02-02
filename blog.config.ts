@@ -117,6 +117,11 @@ export default defineConfig({
       desc: "明日尚未到来，希望凝于心上",
       link: "https://tnxg.top",
       feed: "https://tnxgmoe.com/feed",
+    },
+    {
+      name: "Kevin Wang的小站",
+      desc: "记录我的IT学习历程",
+      link: "https://pluskevin.com",
     }
   ],
   twikoo: {
