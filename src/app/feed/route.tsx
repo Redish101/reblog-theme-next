@@ -111,6 +111,7 @@ export async function GET(req: Request) {
       id: link,
       link,
       date: new Date(article.created_at),
+      published: new Date(article.created_at),
       content: content(),
     });
   });
