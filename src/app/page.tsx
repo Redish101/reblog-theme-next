@@ -56,6 +56,7 @@ export default async function ArticlesPage() {
             description={article.desc}
             date={article.created_at}
             slug={article.slug}
+            cover={article.cover}
             index={index}
           />
         ))}

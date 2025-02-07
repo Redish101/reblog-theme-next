@@ -1,6 +1,7 @@
 import * as motion from "framer-motion/client"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
+import Image from "next/image"
 
 interface ArticleCardProps {
   title: string
@@ -8,9 +9,10 @@ interface ArticleCardProps {
   date: string
   slug: string
   index: number
+  cover?: string // Add cover prop
 }
 
-export function ArticleCard({ title, description, date, slug, index }: ArticleCardProps) {
+export function ArticleCard({ title, description, date, slug, index, cover }: ArticleCardProps) {
   return (
     <motion.div
       animate={{ y: 0, opacity: 1 }}
@@ -18,7 +20,19 @@ export function ArticleCard({ title, description, date, slug, index }: ArticleCa
       transition={{ delay: index * 0.1, duration: 0.4 }}
     >
       <Link href={`/article/${slug}`}>
-        <Card className="transition-all hover:bg-none hover:shadow-md)">
+        <Card className="transition-all overflow-hidden hover:bg-none hover:shadow-md">
+          
+          {cover && (
+            <div className="relative w-full h-48">
+              <Image
+                src={cover}
+                alt={title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
+          )}
           <CardHeader>
             <CardTitle className="text-xl font-medium">{title}</CardTitle>
             {description && <p className="mt-2 text-slate-600 font-normal">{description}</p>}
