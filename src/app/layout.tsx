@@ -6,6 +6,7 @@ import getSiteInfo from "@/utils/siteInfo";
 import Footer from "@/components/layout/footer";
 import ConsoleBadge from "@/components/console-badge";
 import NavBarWrapper from "@/components/layout/navbar-wrapper";
+import { ThemeProvider } from "@/components/theme-provider";
 
 // const miSans = localFont({
 //   src: "./font/MiSans-VF.woff2",
@@ -33,13 +34,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" suppressHydrationWarning>
       <body>
-        <NextTopLoader />
-        <NavBarWrapper />
-        <Container>{children}</Container>
-        <Footer />
-        <ConsoleBadge />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <NextTopLoader />
+          <NavBarWrapper />
+          <Container>{children}</Container>
+          <Footer />
+          <ConsoleBadge />
+        </ThemeProvider>
       </body>
     </html>
   );

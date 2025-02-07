@@ -35,7 +35,7 @@ export function ArticleCard({ title, description, date, slug, index, cover }: Ar
           )}
           <CardHeader>
             <CardTitle className="text-xl font-medium">{title}</CardTitle>
-            {description && <p className="mt-2 text-slate-600 font-normal">{description}</p>}
+            {description && <p className="mt-2 text-muted-foreground font-normal">{description}</p>}
           </CardHeader>
           <CardContent>
             <div className="flex items-center justify-between">
