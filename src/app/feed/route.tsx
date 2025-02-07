@@ -1,4 +1,4 @@
-import Markdown from "@/components/Markdown";
+import Markdown from "@/components/markdown";
 import getThemeKit from "@/libs/themekit";
 import { Feed } from "feed";
 

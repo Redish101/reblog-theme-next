@@ -2,10 +2,10 @@ import getThemeKit from "@/libs/themekit";
 import { Metadata } from "next";
 import * as motion from "framer-motion/client";
 
-import Comment from "@/components/Comment";
+import Comment from "@/components/comment";
 import { notFound } from "next/navigation";
-import Markdown from "@/components/Markdown";
-import CopyrightCard from "@/components/CopyrightCard";
+import Markdown from "@/components/markdown";
+import CopyrightCard from "@/components/copyright-card";
 import getSiteInfo from "@/utils/siteInfo";
 
 export const dynamic = "force-dynamic";

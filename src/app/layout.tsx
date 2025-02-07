@@ -1,11 +1,11 @@
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import type { Metadata } from "next";
-import Container from "@/components/Layout/Container";
+import Container from "@/components/layout/container";
 import getSiteInfo from "@/utils/siteInfo";
-import Footer from "@/components/Layout/Footer";
-import ConsoleBadge from "@/components/ConsoleBadge";
-import NavBarWrapper from "@/components/Layout/NavBarWrapper";
+import Footer from "@/components/layout/footer";
+import ConsoleBadge from "@/components/console-badge";
+import NavBarWrapper from "@/components/layout/navbar-wrapper";
 
 // const miSans = localFont({
 //   src: "./font/MiSans-VF.woff2",

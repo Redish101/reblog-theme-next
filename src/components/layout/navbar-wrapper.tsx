@@ -1,6 +1,6 @@
 import { getConfig } from "@/core/config";
 import getSiteInfo from "@/utils/siteInfo";
-import NavBar from "./NavBar";
+import NavBar from "./navbar";
 
 export default async function NavBarWrapper() {
   const site = await getSiteInfo();

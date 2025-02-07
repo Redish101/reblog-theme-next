@@ -1,4 +1,4 @@
-import ExtraTest from "./ExtraTest";
-import GithubRepoCard from "./GithubRepoCard";
+import ExtraTest from "./extra-test";
+import GithubRepoCard from "./github-repo-card";
 
 export { ExtraTest, GithubRepoCard };
