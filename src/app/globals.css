@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --card-background: #e2e9eb;
   --nav-background: #fafeff90;
@@ -21,6 +22,7 @@
 body {
   font-synthesis: none;
   font-size: 16px;
+  font-family: "MiSans VF";
   margin: 0;
   padding: 0;
 }
