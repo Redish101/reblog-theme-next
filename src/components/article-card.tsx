@@ -77,58 +77,58 @@ export async function ArticleContentCard({
 }: ArticleCardProps & { content: string }) {
   return (
     <div>
-        <Card className="transition-all overflow-hidden hover:bg-none hover:shadow-md">
-          {cover && (
-            <div className="relative w-full md:h-64 h-48">
-              <Image
-                src={cover}
-                alt={title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </div>
-          )}
-          <CardHeader>
+      <Card className="transition-all overflow-hidden hover:bg-none hover:shadow-md">
+        {cover && (
+          <div className="relative w-full md:h-64 h-48">
+            <Image
+              src={cover}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+        )}
+        <CardHeader>
+          <motion.div
+            initial={{ y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            <CardTitle className="text-2xl font-medium">{title}</CardTitle>
             <motion.div
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
+              className="mt-4"
             >
-              <CardTitle className="text-2xl font-medium">{title}</CardTitle>
-              <motion.div
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.2 }}
-                className="mt-4"
-              >
-                <p className="text-muted-foreground">
-                  发布于{" "}
-                  {new Date(date).toLocaleDateString("zh-CN", {
-                    year: "numeric",
-                    month: "2-digit",
-                    day: "2-digit",
-                  })}
-                </p>
-              </motion.div>
+              <p className="text-muted-foreground">
+                发布于{" "}
+                {new Date(date).toLocaleDateString("zh-CN", {
+                  year: "numeric",
+                  month: "2-digit",
+                  day: "2-digit",
+                })}
+              </p>
             </motion.div>
-          </CardHeader>
-          <CardContent>
-            <motion.div
-              initial={{ y: -10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              className="prose dark:prose-invert max-w-none mt-4 prose-a:no-underline"
-            >
-              <Markdown>{content}</Markdown>
-              <CopyrightCard
-                title={title}
-                url={`${(await getSiteInfo())?.url}/article/${slug}`}
-              />
-            </motion.div>
-          </CardContent>
-        </Card>
-        <Comment />
+          </motion.div>
+        </CardHeader>
+        <CardContent>
+          <motion.div
+            initial={{ y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            className="prose dark:prose-invert max-w-none mt-4 prose-a:no-underline"
+          >
+            <Markdown>{content}</Markdown>
+          </motion.div>
+          <CopyrightCard
+            title={title}
+            url={`${(await getSiteInfo())?.url}/article/${slug}`}
+          />
+        </CardContent>
+      </Card>
+      <Comment />
     </div>
   );
 }
