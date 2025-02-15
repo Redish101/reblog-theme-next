@@ -89,13 +89,13 @@ export function ArticleContentCard({
           )}
           <CardHeader>
             <motion.div
-              initial={{ y: 10, opacity: 0 }}
+              initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
               <CardTitle className="text-2xl font-medium">{title}</CardTitle>
               <motion.div
-                initial={{ y: 10, opacity: 0 }}
+                initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
                 className="mt-4"
@@ -113,7 +113,7 @@ export function ArticleContentCard({
           </CardHeader>
           <CardContent>
             <motion.div
-              initial={{ y: 10, opacity: 0 }}
+              initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
               className="prose dark:prose-invert max-w-none mt-4 prose-a:no-underline"
