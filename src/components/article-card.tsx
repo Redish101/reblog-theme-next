@@ -125,10 +125,10 @@ export async function ArticleContentCard({
                 title={title}
                 url={`${(await getSiteInfo())?.url}/article/${slug}`}
               />
-              <Comment />
             </motion.div>
           </CardContent>
         </Card>
+        <Comment />
     </div>
   );
 }
