@@ -3,6 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import Markdown from "./markdown";
+import Comment from "./twikoo";
+import CopyrightCard from "./copyright-card";
+import getSiteInfo from "@/utils/siteInfo";
 
 interface ArticleCardProps {
   title: string;
@@ -65,7 +68,7 @@ export function ArticleCard({
     </motion.div>
   );
 }
-export function ArticleContentCard({
+export async function ArticleContentCard({
   title,
   content,
   date,
@@ -118,9 +121,12 @@ export function ArticleContentCard({
               transition={{ duration: 0.4, delay: 0.4 }}
               className="prose dark:prose-invert max-w-none mt-4 prose-a:no-underline"
             >
-              <Markdown>
-                {content}
-              </Markdown>
+              <Markdown>{content}</Markdown>
+              <CopyrightCard
+                title={title}
+                url={`${(await getSiteInfo())?.url}/article/${slug}`}
+              />
+              <Comment />
             </motion.div>
           </CardContent>
         </Card>

@@ -32,15 +32,6 @@ export async function generateMetadata(props: {
   };
 }
 
-function cookDate(date: string) {
-  const dateObj = new Date(date);
-  return dateObj.toLocaleDateString("zh-CN", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  });
-}
-
 export default async function Article(props: {
   params: Promise<{ slug: string }>;
 }) {
@@ -61,12 +52,6 @@ export default async function Article(props: {
         cover={article.cover}
         content={article.content}
       />
-
-      <CopyrightCard
-        title={article.title}
-        url={`${(await getSiteInfo())?.url}/article/${slug}`}
-      />
-      <Comment />
     </div>
   );
 }
