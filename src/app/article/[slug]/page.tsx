@@ -58,6 +58,7 @@ export default async function Article(props: {
         title={article.title}
         date={article.created_at}
         slug={article.slug}
+        cover={article.cover}
         content={article.content}
       />
 
