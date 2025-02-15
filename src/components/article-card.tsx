@@ -77,7 +77,6 @@ export async function ArticleContentCard({
 }: ArticleCardProps & { content: string }) {
   return (
     <div>
-      <Link href={`/article/${slug}`}>
         <Card className="transition-all overflow-hidden hover:bg-none hover:shadow-md">
           {cover && (
             <div className="relative w-full md:h-64 h-48">
@@ -130,7 +129,6 @@ export async function ArticleContentCard({
             </motion.div>
           </CardContent>
         </Card>
-      </Link>
     </div>
   );
 }
