@@ -116,7 +116,7 @@ export function ArticleContentCard({
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="prose max-w-none mt-4"
+              className="prose dark:prose-invert max-w-none mt-4 prose-a:no-underline"
             >
               <Markdown>
                 {content}
