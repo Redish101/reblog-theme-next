@@ -1,5 +1,5 @@
 import "./globals.css";
-import "./font.css"
+// import "./font.css"
 import NextTopLoader from "nextjs-toploader";
 import type { Metadata } from "next";
 import Container from "@/components/layout/container";

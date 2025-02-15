@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import Markdown from "@/components/markdown";
 import CopyrightCard from "@/components/copyright-card";
 import getSiteInfo from "@/utils/siteInfo";
+import { ArticleContentCard } from "@/components/article-card";
 
 export const dynamic = "force-dynamic";
 
@@ -53,35 +54,12 @@ export default async function Article(props: {
 
   return (
     <div className="transition-all">
-      <div className="my-16 flex flex-col gap-4">
-        <div className="text-3xl font-medium leading-normal">
-          <motion.h1
-            animate={{ y: 0, opacity: 1 }}
-            initial={{ y: -10, opacity: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            {article?.title}
-          </motion.h1>
-        </div>
-        <div className="font-normal text-slate-600 dark:text-slate-400">
-          <motion.div
-            animate={{ y: 0, opacity: 1 }}
-            initial={{ y: -10, opacity: 0 }}
-            transition={{ delay: 0.1, duration: 0.4 }}
-          >
-            发布于 {cookDate(article?.created_at!)}
-          </motion.div>
-        </div>
-      </div>
-      <div className="prose dark:prose-invert max-w-none prose-a:no-underline">
-        <motion.article
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: -10, opacity: 0 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
-        >
-          <Markdown>{article.content}</Markdown>
-        </motion.article>
-      </div>
+      <ArticleContentCard
+        title={article.title}
+        date={article.created_at}
+        slug={article.slug}
+        content={article.content}
+      />
 
       <CopyrightCard
         title={article.title}
