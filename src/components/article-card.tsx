@@ -2,6 +2,7 @@ import * as motion from "framer-motion/client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import Markdown from "./markdown";
 
 interface ArticleCardProps {
   title: string;
@@ -92,7 +93,22 @@ export function ArticleContentCard({
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
-              <CardTitle className="text-xl font-medium">{title}</CardTitle>
+              <CardTitle className="text-2xl font-medium">{title}</CardTitle>
+              <motion.div
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                className="mt-4"
+              >
+                <p className="text-muted-foreground">
+                  发布于{" "}
+                  {new Date(date).toLocaleDateString("zh-CN", {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                  })}
+                </p>
+              </motion.div>
             </motion.div>
           </CardHeader>
           <CardContent>
@@ -100,24 +116,11 @@ export function ArticleContentCard({
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
-              className="prose max-w-none"
+              className="prose max-w-none mt-4"
             >
-              <p>{content}</p>
-            </motion.div>
-            <motion.div
-              initial={{ y: 10, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.6 }}
-              className="flex items-center justify-between mt-4"
-            >
-              <p className="text-sm text-muted-foreground">
-                发布于{" "}
-                {new Date(date).toLocaleDateString("zh-CN", {
-                  year: "numeric",
-                  month: "2-digit",
-                  day: "2-digit",
-                })}
-              </p>
+              <Markdown>
+                {content}
+              </Markdown>
             </motion.div>
           </CardContent>
         </Card>
