@@ -28,6 +28,8 @@ export default async function getShikiInstance() {
         import("shiki/langs/bash.mjs"),
         import("shiki/langs/xml.mjs"),
         import("shiki/langs/diff.mjs"),
+        import("shiki/langs/markdown.mjs"),
+        import("shiki/langs/powershell.mjs")
       ],
       engine: js,
     });
