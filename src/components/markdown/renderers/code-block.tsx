@@ -1,4 +1,4 @@
-import getShikiInstance from "@/libs/shiki";
+import getShikiInstance from "@/lib/shiki";
 import clsx from "clsx";
 
 const highlighter = await getShikiInstance();

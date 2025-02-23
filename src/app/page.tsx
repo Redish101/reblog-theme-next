@@ -1,4 +1,4 @@
-import getThemeKit from "@/libs/themekit"
+import getThemeKit from "@/lib/themekit"
 import type { Metadata } from "next"
 import * as motion from "framer-motion/client"
 import { ArticleCard } from "@/components/article-card"

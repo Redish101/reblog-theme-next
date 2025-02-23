@@ -1,4 +1,4 @@
-import getThemeKit from "@/libs/themekit";
+import getThemeKit from "@/lib/themekit";
 import { isDynamicServerError } from "next/dist/client/components/hooks-server-context";
 import { cache } from "react";
 

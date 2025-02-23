@@ -1,5 +1,5 @@
 import Markdown from "@/components/markdown";
-import getThemeKit from "@/libs/themekit";
+import getThemeKit from "@/lib/themekit";
 import { Feed } from "feed";
 
 export const dynamic = "force-dynamic";

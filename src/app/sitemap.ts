@@ -1,4 +1,4 @@
-import getThemeKit from "@/libs/themekit";
+import getThemeKit from "@/lib/themekit";
 import getSiteInfo from "@/utils/siteInfo";
 import type { MetadataRoute } from "next";
 

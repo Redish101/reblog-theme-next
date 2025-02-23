@@ -1,4 +1,4 @@
-import getThemeKit from "@/libs/themekit";
+import getThemeKit from "@/lib/themekit";
 import { Metadata } from "next";
 import * as motion from "framer-motion/client";
 

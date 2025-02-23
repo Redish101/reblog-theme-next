@@ -3,11 +3,13 @@ import {
   createJavaScriptRegexEngine,
   HighlighterCore,
 } from "shiki";
+import fs from "fs";
 import oneLight from "shiki/themes/one-light.mjs";
 import oneDarkPro from "shiki/themes/one-dark-pro.mjs";
 
 let _SHIKI_INSTANCE: HighlighterCore | null = null;
 
+const gn = JSON.parse(fs.readFileSync('./gn.json', 'utf8'))
 export default async function getShikiInstance() {
   if (!_SHIKI_INSTANCE) {
     const js = createJavaScriptRegexEngine();
@@ -30,7 +32,8 @@ export default async function getShikiInstance() {
         import("shiki/langs/diff.mjs"),
         import("shiki/langs/markdown.mjs"),
         import("shiki/langs/powershell.mjs"),
-        import("shiki/langs/cpp.mjs")
+        import("shiki/langs/cpp.mjs"),
+        gn
       ],
       engine: js,
     });

@@ -1,4 +1,4 @@
-import { getRepo } from "@/libs/github";
+import { getRepo } from "@/lib/github";
 import clsx from "clsx";
 import Link from "next/link";
 import { Suspense } from "react";
