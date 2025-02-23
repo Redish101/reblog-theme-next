@@ -6,6 +6,7 @@ import Markdown from "./markdown";
 import Comment from "./twikoo";
 import CopyrightCard from "./copyright-card";
 import getSiteInfo from "@/utils/siteInfo";
+import { AISummary} from "./ai-summary";
 
 interface ArticleCardProps {
   title: string;
@@ -74,7 +75,8 @@ export async function ArticleContentCard({
   date,
   slug,
   cover,
-}: ArticleCardProps & { content: string }) {
+  aiSummary
+}: ArticleCardProps & { content: string, aiSummary?: string }) {
   return (
     <div>
       <Card className="transition-all overflow-hidden hover:bg-none hover:shadow-md">
@@ -114,11 +116,16 @@ export async function ArticleContentCard({
           </motion.div>
         </CardHeader>
         <CardContent>
+          { aiSummary && (
+            <div className="mt-4">
+              <AISummary summary={aiSummary} />
+            </div>
+          )}
           <motion.div
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.4 }}
-            className="prose dark:prose-invert max-w-none mt-4 prose-a:no-underline"
+            className="prose dark:prose-invert max-w-none mt-2 prose-a:no-underline"
           >
             <Markdown>{content}</Markdown>
           </motion.div>

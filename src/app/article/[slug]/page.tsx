@@ -51,6 +51,7 @@ export default async function Article(props: {
         slug={article.slug}
         cover={article.cover}
         content={article.content}
+        aiSummary={article.ai_summary}
       />
     </div>
   );

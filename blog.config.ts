@@ -1,7 +1,10 @@
 import { defineConfig } from "@/core/config";
 
 export default defineConfig({
-  serverUrl: "https://reblog.redish101.top",
+  serverUrl:
+    process.env.NODE_ENV == "production"
+      ? "https://reblog.redish101.top"
+      : "http://localhost:3000",
   githubToken: process.env.GITHUB_TOKEN!,
   menu: [
     {
@@ -93,7 +96,7 @@ export default defineConfig({
       name: "煮雪话河山",
       desc: "如月之恒，如日之升。",
       link: "https://blog.cent1pedee.top/",
-      feed: "https://blog.cent1pedee.top/atom.xml"
+      feed: "https://blog.cent1pedee.top/atom.xml",
     },
     {
       name: "❖星港◎Star☆",
@@ -122,7 +125,7 @@ export default defineConfig({
       name: "Kevin Wang的小站",
       desc: "记录我的IT学习历程",
       link: "https://pluskevin.com",
-    }
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
