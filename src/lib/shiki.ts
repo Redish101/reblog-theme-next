@@ -9,7 +9,7 @@ import oneDarkPro from "shiki/themes/one-dark-pro.mjs";
 let _SHIKI_INSTANCE: HighlighterCore | null = null;
 
 const gn = {
-  "name": "GN",
+  "name": "gn",
   "scopeName": "source.gn",
   "fileTypes": ["*.gn", "BUILD.gn"],
   "patterns": [
