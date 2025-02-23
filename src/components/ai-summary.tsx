@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Bot } from "lucide-react";
+import clsx from "clsx";
 
 const useTypewriter = (text: string, speed: number = 50) => {
   const [displayText, setDisplayText] = useState("");
@@ -72,8 +73,20 @@ export function AISummary({ summary }: AISummaryCardProps) {
     >
       <Card className="bg-muted">
         <CardHeader className="flex flex-row items-center space-y-0 space-x-3 pb-3">
-          <Bot className="h-5 w-5 text-primary animate-pulse" />
-          <span className="font-medium text-primary">AI 摘要</span>
+          <Bot
+            className={clsx(
+              "h-5 w-5 text-primary",
+              isTyping ? "animate-pulse" : ""
+            )}
+          />
+          <span
+            className={clsx(
+              "font-medium text-primary",
+              isTyping ? "animate-pulse" : ""
+            )}
+          >
+            AI 摘要
+          </span>
         </CardHeader>
         <CardContent>
           <div className="relative">
