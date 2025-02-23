@@ -1,5 +1,5 @@
 {
-  "name": "GN",
+  "name": "gn",
   "scopeName": "source.gn",
   "fileTypes": ["*.gn", "BUILD.gn"],
   "patterns": [
