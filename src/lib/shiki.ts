@@ -9,7 +9,7 @@ import oneDarkPro from "shiki/themes/one-dark-pro.mjs";
 
 let _SHIKI_INSTANCE: HighlighterCore | null = null;
 
-const gn = JSON.parse(`{
+const gn = {
   "name": "gn",
   "scopeName": "source.gn",
   "fileTypes": ["*.gn", "BUILD.gn"],
@@ -108,7 +108,7 @@ const gn = JSON.parse(`{
     }
   }
 }
-`)
+
 
 export default async function getShikiInstance() {
   if (!_SHIKI_INSTANCE) {
