@@ -126,6 +126,12 @@ export default defineConfig({
       desc: "记录我的IT学习历程",
       link: "https://pluskevin.com",
     },
+    {
+      name: "Admibrill",
+      desc: "有志者,事竟成.",
+      link: "https://blog.qyadbr.top",
+      feed: "https://blog.qyadbr.top/atom.xml",
+    }
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
