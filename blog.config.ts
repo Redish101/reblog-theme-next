@@ -126,6 +126,11 @@ export default defineConfig({
       desc: "记录我的IT学习历程",
       link: "https://pluskevin.com",
     },
+    {
+      name: "Marcus的小站",
+      desc: "人间值得，未来可期",
+      link: "https://blog.marcus233.top"
+    },
   ],
   twikoo: {
     envId: "https://twikoo.redish101.top",
