@@ -2,6 +2,7 @@ import { FriendLinkItem, getConfig } from "@/core/config";
 import * as motion from "framer-motion/client";
 import clsx from "clsx";
 import Link from "next/link";
+import PageContainer from "@/components/layout/page-container";
 
 export const dynamic = "force-static";
 
@@ -42,25 +43,19 @@ export default async function Links() {
   const links = getConfig().friendLinks;
 
   return (
-    <div className="flex flex-col gap-24 my-16">
-      <div className="text-4xl md:text-3xl sm:text-2xl font-medium">
-        <motion.h1
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: -10, opacity: 0 }}
-          transition={{ duration: 0.4 }}
-        >
-          友情链接
-        </motion.h1>
-      </div>
-
+    <PageContainer title="友情链接">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {links?.map((link, index) => (
           <LinkItem key={link.name} link={link} index={index} />
         ))}
       </div>
-      <Link href="https://github.com/Redish101/reblog-theme-next" target="_blank" className="text-center">
+      <Link
+        href="https://github.com/Redish101/reblog-theme-next"
+        target="_blank"
+        className="text-center"
+      >
         添加您的网站
       </Link>
-    </div>
+    </PageContainer>
   );
 }

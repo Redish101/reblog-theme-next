@@ -1,13 +1,9 @@
 import getThemeKit from "@/lib/themekit";
 import { Metadata } from "next";
-import * as motion from "framer-motion/client";
-
-import Comment from "@/components/twikoo";
 import { notFound } from "next/navigation";
-import Markdown from "@/components/markdown";
-import CopyrightCard from "@/components/copyright-card";
 import getSiteInfo from "@/utils/siteInfo";
 import { ArticleContentCard } from "@/components/article-card";
+import PageContainer from "@/components/layout/page-container";
 
 export const dynamic = "force-dynamic";
 
@@ -44,7 +40,7 @@ export default async function Article(props: {
   }
 
   return (
-    <div className="transition-all">
+    <PageContainer>
       <ArticleContentCard
         title={article.title}
         date={article.created_at}
@@ -53,6 +49,6 @@ export default async function Article(props: {
         content={article.content}
         aiSummary={article.ai_summary}
       />
-    </div>
+    </PageContainer>
   );
 }

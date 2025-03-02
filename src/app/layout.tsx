@@ -2,7 +2,6 @@ import "./globals.css";
 // import "./font.css"
 import NextTopLoader from "nextjs-toploader";
 import type { Metadata } from "next";
-import Container from "@/components/layout/container";
 import getSiteInfo from "@/utils/siteInfo";
 import Footer from "@/components/layout/footer";
 import ConsoleBadge from "@/components/console-badge";
@@ -44,7 +43,7 @@ export default function RootLayout({
         >
           <NextTopLoader />
           <NavBarWrapper />
-          <Container>{children}</Container>
+          {children}
           <Footer />
           <ConsoleBadge />
         </ThemeProvider>

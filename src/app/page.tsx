@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import * as motion from "framer-motion/client"
 import { ArticleCard } from "@/components/article-card"
 import getSiteInfo from "@/utils/siteInfo"
+import PageContainer from "@/components/layout/page-container"
 
 export const dynamic = "force-dynamic"
 
@@ -28,26 +29,10 @@ export default async function ArticlesPage() {
   const site = await themekit.getSite()
 
   return (
-    <div className="transition-all">
-      <div className="mx-4 my-16 flex flex-col space-y-2">
-        <motion.h1
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: -10, opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          className="text-3xl font-medium leading-normal"
-        >
-          {site?.name}
-        </motion.h1>
-        <div className="font-normal text-slate-600 dark:text-slate-400">
-          <motion.div
-            animate={{ y: 0, opacity: 1 }}
-            initial={{ y: -10, opacity: 0 }}
-            transition={{ delay: 0.1, duration: 0.4 }}
-          >
-            {site?.desc}
-          </motion.div>
-        </div>
-      </div>
+    <PageContainer
+      title={site?.name}
+      subTitle={site?.desc}
+    >
       <div className="space-y-6">
         {articles.map((article, index) => (
           <ArticleCard
@@ -61,7 +46,7 @@ export default async function ArticlesPage() {
           />
         ))}
       </div>
-    </div>
+    </PageContainer>
   )
 }
 
