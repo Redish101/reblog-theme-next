@@ -26,9 +26,9 @@ const NavBar: React.FC<NavBarProps> = ({ site, config }) => {
   return (
     <nav
       className={clsx(
-        "backdrop-blur h-12 flex justify-between items-center transition-all ease-out",
-        "px-2 fixed w-full z-[1000] top-0 sm:px-16",
-        scrolled && "shadow bg-nav-background",
+        "backdrop-blur-sm h-12 flex justify-between items-center transition-all ease-out",
+        "px-2 fixed w-full z-1000 top-0 sm:px-16",
+        scrolled && "shadow-sm bg-nav-background",
       )}
     >
       <span className="font-medium">

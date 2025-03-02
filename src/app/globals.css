@@ -1,56 +1,122 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
+@plugin "@tailwindcss/typography";
 
-:root {
-  --card-background: #e2e9eb;
-  --nav-background: #fafeff90;
-  --primary: #1a66ff;
-  --primary-s: #1a66ff50;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --transition-duration-*: initial;
+  --transition-duration: 400ms;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card-background: var(--card-background);
+  --color-nav-background: var(--nav-background);
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
 }
 
-@media (prefers-color-scheme: dark) {
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer utilities {
   :root {
-    --card-background: #252d38;
-    --nav-background: #252d3890;
+    --card-background: #e2e9eb;
+    --nav-background: #fafeff90;
     --primary: #1a66ff;
     --primary-s: #1a66ff50;
   }
-}
 
-body {
-  font-synthesis: none;
-  font-size: 16px;
-  /* font-family: "MiSans VF"; */
-  margin: 0;
-  padding: 0;
-}
-
-/* shiki 深色模式适配 */
-@media (prefers-color-scheme: dark) {
-  .shiki,
-  .shiki span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-    font-style: var(--shiki-dark-font-style) !important;
-    font-weight: var(--shiki-dark-font-weight) !important;
-    text-decoration: var(--shiki-dark-text-decoration) !important;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --card-background: #252d38;
+      --nav-background: #252d3890;
+      --primary: #1a66ff;
+      --primary-s: #1a66ff50;
+    }
   }
-}
 
-.link {
-  @apply bg-transparent transition-all ease-out px-0.5;
-  background-image: linear-gradient(var(--primary-s), var(--primary-s));
-  color: var(--primary);
-  background-position: bottom;
-  background-size: 100% 0.1em;
-  background-repeat: no-repeat;
-}
+  body {
+    font-synthesis: none;
+    font-size: 16px;
+    /* font-family: "MiSans VF"; */
+    margin: 0;
+    padding: 0;
+  }
 
-.link:hover {
-  @apply rounded;
-  background-size: 100% 100%;
+  /* shiki 深色模式适配 */
+  @media (prefers-color-scheme: dark) {
+    .shiki,
+    .shiki span {
+      color: var(--shiki-dark) !important;
+      background-color: var(--shiki-dark-bg) !important;
+      font-style: var(--shiki-dark-font-style) !important;
+      font-weight: var(--shiki-dark-font-weight) !important;
+      text-decoration: var(--shiki-dark-text-decoration) !important;
+    }
+  }
+
+  .link {
+    @apply bg-transparent transition-all ease-out px-0.5;
+    background-image: linear-gradient(var(--primary-s), var(--primary-s));
+    color: var(--primary);
+    background-position: bottom;
+    background-size: 100% 0.1em;
+    background-repeat: no-repeat;
+  }
+
+  .link:hover {
+    @apply rounded;
+    background-size: 100% 100%;
+  }
 }
 
 @layer base {
