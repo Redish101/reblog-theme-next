@@ -153,6 +153,8 @@ export default async function getShikiInstance() {
     _SHIKI_INSTANCE = await createHighlighterCore({
       themes: [oneLight, oneDarkPro],
       langs: [
+        import("shiki/langs/js.mjs"),
+        import("shiki/langs/jsx.mjs"),
         import("shiki/langs/ts.mjs"),
         import("shiki/langs/tsx.mjs"),
         import("shiki/langs/go.mjs"),
