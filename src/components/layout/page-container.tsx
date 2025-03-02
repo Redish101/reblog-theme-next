@@ -12,18 +12,17 @@ export default function PageContainer({
 }) {
   return (
     <main className="min-h-screen max-w-[855px] mx-auto px-2 pt-32 break-words transition-all">
-      {title && subTitle && (
+      {title && (
         <div className="mx-4 my-16 flex flex-col space-y-2">
-          {title && (
-            <motion.h1
-              animate={{ y: 0, opacity: 1 }}
-              initial={{ y: -10, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="text-3xl font-medium leading-normal"
-            >
-              {title}
-            </motion.h1>
-          )}
+          <motion.h1
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-3xl font-medium leading-normal"
+          >
+            {title}
+          </motion.h1>
+
           {subTitle && (
             <div className="font-normal text-slate-600 dark:text-slate-400">
               <motion.div
