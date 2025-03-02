@@ -19,6 +19,7 @@
     "@reblog/themekit": "^0.1.10",
     "@sentry/nextjs": "^9.0.0",
     "@tailwindcss/typography": "^0.5.15",
+    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "fast-xml-parser": "^5.0.0",
     "feed": "^4.2.2",

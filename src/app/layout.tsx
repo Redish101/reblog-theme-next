@@ -7,6 +7,7 @@ import Footer from "@/components/layout/footer";
 import ConsoleBadge from "@/components/console-badge";
 import NavBarWrapper from "@/components/layout/navbar-wrapper";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Analytics } from "@vercel/analytics/react"
 
 // const miSans = localFont({
 //   src: "./font/MiSans-VF.woff2",
@@ -48,6 +49,7 @@ export default function RootLayout({
           <ConsoleBadge />
         </ThemeProvider>
       </body>
+      <Analytics />
     </html>
   );
 }
