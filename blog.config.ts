@@ -131,6 +131,11 @@ export default defineConfig({
       desc: "有志者,事竟成.",
       link: "https://blog.qyadbr.top",
       feed: "https://blog.qyadbr.top/atom.xml",
+    },
+    {
+      name: "水氵冫",
+      desc: "水风清，晚霞明",
+      link: "https://yuuu.org/atom.xml"
     }
   ],
   twikoo: {

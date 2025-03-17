@@ -17,7 +17,7 @@
     "@iconify-json/mdi": "^1.2.1",
     "@iconify/tailwind": "^1.1.3",
     "@reblog/themekit": "^0.1.10",
-    "@sentry/nextjs": "^9.0.0",
+    "@sentry/nextjs": "^9.3.0",
     "@tailwindcss/typography": "^0.5.15",
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
