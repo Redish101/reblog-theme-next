@@ -135,7 +135,7 @@ export default defineConfig({
     {
       name: "水氵冫",
       desc: "水风清，晚霞明",
-      link: "https://yuuu.org/atom.xml"
+      link: "https://yuuu.org"
     }
   ],
   twikoo: {
